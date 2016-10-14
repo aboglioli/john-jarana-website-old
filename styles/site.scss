@@ -197,7 +197,7 @@ h4 {
 
 #ab-header {
   @include parallax-background("{{ site.images }}/header-background.png");
-  @include overlay-opacity(#222, .85);
+  @include overlay-opacity(#222, .3);
   #ab-navbar {
     border: none;
     text-align: center;
@@ -294,6 +294,8 @@ h4 {
     }
     .content {
       margin-bottom: 3em;
+      color: white;
+      text-shadow: 0 0 2px #000;
     }
     .button {
       button {
