@@ -196,7 +196,7 @@ h4 {
 }
 
 #ab-header {
-  @include parallax-background("../images/header-background.jpg");
+  @include parallax-background("{{ site.images }}/header-background.png");
   @include overlay-opacity(#222, .85);
   #ab-navbar {
     border: none;
@@ -314,12 +314,29 @@ h4 {
 }
 
 #ab-images {
-  @include background-blur("../images/panel_wood_texture.jpg", 1px);
-  @include overlay-opacity(#222, 0.5);
+  @include background("{{ site.images }}/wood_pattern.png");
+  .background {
+    top: -60px;
+    z-index: 2;
+    height: 822px;
+  }
+  @include overlay-opacity(#222, 0.2);
+  .overlay {
+    z-index: 3;
+  }
+  min-height: 690px;
+  max-height: 690px;
   background-color: #eee;
   padding: 50px 0;
   position: relative;
   box-shadow: 0 -15px 100px #fff;
+  img.drink-img {
+    position: absolute;
+    bottom: -30%;
+    left: 15px;
+    max-width: 400px;
+    z-index: 10;
+  }
   .left-content {
     max-width: 100%;
     h2 {
@@ -407,7 +424,7 @@ h4 {
   height: 150px;
   // background-color: #333;
   text-align: center;
-  background: url("/images/wood_texture.jpg");
+  background: url("{{ site.images }}/wood_texture.jpg");
   background-size: 100% 100%;
   background-repeat: repeat;
   position: relative;
@@ -415,7 +432,7 @@ h4 {
 }
 
 #ab-information {
-  @include background("../images/panel_wood_texture.jpg");
+  @include background("{{ site.images }}/panel_wood_texture.jpg");
   @include overlay-opacity(#555, 0.5);
   position: relative;
   padding: 50px 0;
@@ -515,6 +532,11 @@ h4 {
       }
     }
   }
+}
+
+.ab-section {
+  min-height: 500px;
+  background-color: #ccc;
 }
 
 .ab-footer {

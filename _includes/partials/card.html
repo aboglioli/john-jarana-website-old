@@ -1,0 +1,9 @@
+<article class="card">
+  <figure>
+    <img class="card-img" src={{ include.image | prepend: "/images/" | prepend: site.assets }} alt="">
+  </figure>
+  <div class="card-body">
+    <h2>{{ include.title }}</h2>
+    {{ include.text }}
+  </div>
+</article>
