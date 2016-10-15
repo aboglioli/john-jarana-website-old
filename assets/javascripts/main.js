@@ -1,16 +1,12 @@
-(function ($) {
-  'use strict';
-
-  $('.loop').owlCarousel({
-      center: true,
-      items:2,
-      loop:true,
-      margin:10,
-      responsive:{
-          600:{
-              items:4
-          }
-      }
+jQuery(function($) {
+  $(".owl-carousel").owlCarousel({
+    margin:30,
+    loop:true,
+    items:3,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
   });
-
-})(jQuery);
+});

@@ -11,12 +11,13 @@ description: >
 
   <div class="background"></div>
 
-
   <div class="card-container col-sm-10 col-sm-offset-1">
 
+    <div class="owl-carousel" style="z-index: 10;position: relative;">
     {% for card_item in site.data.index.card_items %}
       {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
     {% endfor %}
+    </div>
 
   </div>
 

@@ -1,23 +1,14 @@
 // CARD
 .card-container {
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  display: -webkit-box;
-  display: flex;
+  display: inline-block;
+  position: relative;
   overflow: hidden;
   .card {
     z-index: 5;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    box-shadow: 3px 3px 5px 0px #000;
     margin: 0.2em 0.1em;
     position: relative;
-    -webkit-box-flex: auto;
-    -ms-flex: auto;
-    flex: auto;
-    width: 250px;
     figure {
       overflow: hidden;
       .card-img {
@@ -36,14 +27,14 @@
       width: 100%;
       background-color: rgba(50, 50, 50, 0.7);
       color: #fff;
-      font-size: 0.7em;
+      font-size: 1em;
       padding: 0.5em;
       h2 {
         font-size: 1.5em;
-        line-height: 0.5em;
+        line-height: 1em;
         margin: 0.5em;
         color: #fff;
-        text-shadow: 0 0 2px #000;
+        text-shadow: 1px 0 2px #000;
       }
     }
     &:hover {
@@ -54,6 +45,26 @@
         }
       }
     }
+
+    .pin {
+      z-index: 2;
+      background: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .pin-left {
+      @extend .pin;
+      left: -5px;
+    }
+    .pin-right {
+      @extend .pin;
+      right: -5px;
+    }
+
   }
 }
 
