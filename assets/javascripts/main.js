@@ -4,7 +4,7 @@ jQuery(function($) {
     loop:true,
     items:3,
     autoplay:true,
-    autoplayTimeout:2000,
+    autoplayTimeout:3500,
     autoplayHoverPause:true,
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',
