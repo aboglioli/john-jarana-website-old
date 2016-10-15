@@ -1,17 +1,25 @@
 ---
 layout: default
 title: Barra Móvil de Tragos en Mendoza
-logo: John Jarana Logotipo-02.png
+logo: Logo Jarana-01.png
 background-image: header-background.png
 description: >
   Breve descripción. Muy breve, pero que explique bien lo que debería explicar bien. Sólo a modo de prueba.
 ---
 
+<!-- MAIN -->
 <section id="ab-main">
 
-  <div class="background"></div>
+  <div class="background-container">
+    <img src="{{ site.images }}/wood_pattern2.png" alt="" />
+  </div>
 
-  <div class="card-container col-sm-10 col-sm-offset-1">
+
+  <div class="content col-sm-3 wow fadeInLeft">
+    <h1>Título</h1>
+  </div>
+
+  <div class="card-container col-sm-9">
 
     <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
     {% for card_item in site.data.index.card_items %}
@@ -26,34 +34,9 @@ description: >
   <div class="clearfix"></div>
 
 </section>
+<!-- MAIN -->
 
-{% comment %}
-<div class="ab-separator">
-  <div class="overlay"></div>
-</div>
-
-<section id="ab-information">
-
-  <div class="overlay"></div>
-  <div class="background"></div>
-
-  <div class="left-content col-sm-9">
-
-    {% for media_item in site.data.index.media_items %}
-
-     {{ index }}
-      {% include partials/media-list.html type=media_item.type image=media_item.image title=media_item.title text=media_item.text index=forloop.index %}
-
-    {% endfor %}
-
-  </div>
-  <div class="right-content col-sm-3">
-    <h2><span>Cabecera</span></h2>
-    <img src="{{ "beer3.png" | prepend: "/images/" | prepend: site.assets }}" alt="" class="drink-img">
-  </div>
-  <div class="clearfix"></div>
-</section>
-{% endcomment %}
-
+<!-- SECTION -->
 <section class="ab-section">
 </section>
+<!-- SECTION -->

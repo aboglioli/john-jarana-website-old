@@ -1,8 +1,8 @@
 ---
 ---
 
-$font-primary: 'Work Sans', Arial, sans-serif;
-$font-secondary: 'Montserrat', Arial, sans-serif;
+$font-primary: 'CarrigRefined', Arial, sans-serif;
+$font-secondary: 'Din Pro', Arial, sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -17,6 +17,8 @@ $brand-darker: #444;
 $brand-body-color: #818892;
 $brand-selection-color: #f9f6f0;
 $brand-bg-color: $brand-white;
+
+$ab-section-background-color: #eee;
 
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
@@ -49,17 +51,23 @@ $form-group-margin-bottom:       30px !default;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-@mixin overlay() {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
+@mixin blur($blur){
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -o-filter: blur($blur);
+  -ms-filter: blur($blur);
+  filter: blur($blur);
 }
-@mixin overlay-opacity($background, $opacity) {
+
+
+@mixin overlay($background, $opacity) {
   .overlay {
-    @include overlay();
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
     background: $background;
     opacity: $opacity;
   }
@@ -94,6 +102,12 @@ $form-group-margin-bottom:       30px !default;
   background-repeat: no-repeat;
   position: relative;
 }
+@mixin text-border($border, $e, $color) {
+  text-shadow: $border 0 $e $color,
+              -$border 0 $e $color,
+              0 $border $e $color,
+              0 (-$border) $e $color;
+}
 
 // Import Bootstrap
 @import 'bootstrap';
@@ -102,18 +116,18 @@ $form-group-margin-bottom:       30px !default;
 
 // My custom element styles
 @import 'card';
+@import 'util';
 
 
 /* =======================================================
 *
 *   Template Style
-* Edit this section
 *
 * ======================================================= */
 
 // Template Base
 body {
-  font-family: $font-primary;
+  font-family: $font-secondary;
   font-weight: 400;
   font-size: 17px;
   line-height: 1.8;
@@ -171,7 +185,7 @@ h4 {
 
 .ab-section {
   min-height: 500px;
-  background-color: #ccc;
+  background-color: $ab-section-background-color;
 }
 
 .ab-separator {
@@ -182,11 +196,14 @@ h4 {
   background-size: 100% 100%;
   background-repeat: repeat;
   position: relative;
-  @include overlay-opacity(#222, .7);
+  @include overlay(#222, .7);
 }
 
 .ab-footer {
   @extend .ab-separator;
+  .overlay {
+    box-shadow: 0 -5px 8px #aaa;
+  }
 
   .contact-item {
     z-index: 3;
@@ -251,6 +268,7 @@ h4 {
           position: relative;
           display: block;
           padding-bottom: 2px;
+          font-family: $font-primary;
           &:before {
             content: "";
             position: absolute;
@@ -301,7 +319,7 @@ h4 {
 // HEADER
 #ab-header {
   @include parallax-background("{{ site.images }}/header-background.png");
-  @include overlay-opacity(#222, .3);
+  @include overlay(#222, .3);
 
   #ab-header-container {
     clear: both;
@@ -315,8 +333,9 @@ h4 {
       margin-bottom: 3em;
       img {
         max-width: 256px;
-        background-color: rgba(255, 255, 255, 0.03);
-        border-radius: 50%;
+        background-color: #fff;
+        @include border-radius(50%);
+        box-shadow: 0 0 5px #000;
       }
     }
     .content {
@@ -345,28 +364,30 @@ h4 {
 
 // MAIN SECTION
 #ab-main {
-  @include background("{{ site.images }}/wood_pattern_lite.png");
-  .background {
+  .background-container {
+    position: absolute;
     top: -60px;
     z-index: 2;
-    height: 822px;
+    width: 100%;
+    left: 0;
+    img {
+      width: 100%;
+    }
   }
 
-  @include overlay-opacity(#222, 0.2);
+  @include overlay(#222, 0.2);
   .overlay {
     z-index: 3;
   }
 
-  min-height: 690px;
-  max-height: 690px;
-  background-color: #eee;
-  padding: 100px 0;
+  min-height: 550px;
+  background-color: $ab-section-background-color;
+  padding: 50px 0;
   position: relative;
-  box-shadow: 0 -15px 100px #fff;
 
   img.drink-img {
     position: absolute;
-    bottom: -30%;
+    bottom: -30px;
     left: 3%;
     max-width: 400px;
     z-index: 10;
@@ -374,20 +395,24 @@ h4 {
 
   .content {
     max-width: 100%;
-    h2 {
+    h1 {
       z-index: 2;
       position: relative;
-      text-align: center;
+      text-align: right;
       margin: 0px;
-      color: #fff;
+      color: #f0d6a7;
       font-weight: 600;
-      font-size: 3em;
-    }
-    img {
-      max-width: 100%;
-      position: relative;
-      z-index: 10;
-      bottom: -120px;
+      font-size: 3.5em;
+      @include text-border(2px, 5px, #914c0a);
+      &:before {
+        content: "";
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+      }
     }
   }
 }

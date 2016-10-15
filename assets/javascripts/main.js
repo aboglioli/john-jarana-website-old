@@ -1,12 +1,12 @@
 jQuery(function($) {
   $(".owl-carousel").owlCarousel({
-    margin:30,
+    navigation: true,
+    margin:15,
     loop:true,
-    items:3,
+    items:2,
     autoplay:true,
     autoplayTimeout:3500,
     autoplayHoverPause:true,
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
+    transitionStyle: "backSlide"
   });
 });
