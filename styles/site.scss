@@ -115,6 +115,7 @@ $form-group-margin-bottom:       30px !default;
 @import 'bootstrap/variables';
 
 // My custom element styles
+@import 'third-party';
 @import 'card';
 @import 'util';
 
@@ -398,9 +399,9 @@ h4 {
     h1 {
       z-index: 2;
       position: relative;
-      text-align: right;
+      text-align: center;
       margin: 0px;
-      color: #f0d6a7;
+      color: #500;
       font-weight: 600;
       font-size: 3.5em;
       @include text-border(2px, 5px, #914c0a);

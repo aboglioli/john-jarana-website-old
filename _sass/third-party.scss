@@ -1,0 +1,23 @@
+.owl-nav {
+  position: absolute;
+  right: -30px;
+  top: 20px;
+  > div {
+    &:hover {
+      color: #fff;
+    }
+    &:before {
+      content: "\f077";
+      font-family: 'FontAwesome';
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.8em;
+      line-height: 1em;
+    }
+  }
+  .owl-prev {
+    display: none;
+  }
+  .owl-next {
+    float: right;
+  }
+}
