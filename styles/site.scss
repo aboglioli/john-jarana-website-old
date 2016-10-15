@@ -345,7 +345,7 @@ h4 {
 
 // MAIN SECTION
 #ab-main {
-  @include background("{{ site.images }}/wood_pattern.png");
+  @include background("{{ site.images }}/wood_pattern_lite.png");
   .background {
     top: -60px;
     z-index: 2;
