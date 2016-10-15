@@ -1,6 +1,9 @@
-<article class="card">
+<article class="card wow fadeInRightBig" data-wow-delay="{{ include.index | times: 0.5 }}s">
   <figure>
+    {% comment %}
     <img class="card-img" src={{ include.image | prepend: "/images/" | prepend: site.assets }} alt="">
+    {% endcomment %}
+    <img class="card-img" src="http://placeimg.com/{{ 256 | minus: include.index }}/256/any" alt="Card Image">
   </figure>
   <div class="card-body">
     <h2>{{ include.title }}</h2>

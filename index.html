@@ -7,27 +7,20 @@ description: >
   Breve descripción. Muy breve, pero que explique bien lo que debería explicar bien. Sólo a modo de prueba.
 ---
 
-<section id="ab-images">
+<section id="ab-main">
 
   <div class="background"></div>
 
-  <div class="left-content col-sm-3">
-    <h2><span>Título</span></h2>
-  </div>
-  <div class="right-content col-sm-9">
+
+  <div class="card-container col-sm-10 col-sm-offset-1">
 
     {% for card_item in site.data.index.card_items %}
-      {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text %}
-    {% endfor %}
-
-    <!-- Only for testing -->
-    {% for card_item in site.data.index.card_items %}
-      {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text %}
+      {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
     {% endfor %}
 
   </div>
 
-  <img src={{ "beer3.png" | prepend: "/images/" | prepend: site.assets }} alt="" class="drink-img">
+  <img src={{ "beer3.png" | prepend: "/images/" | prepend: site.assets }} alt="" class="drink-img wow bounceInDown">
 
   <div class="clearfix"></div>
 
@@ -47,7 +40,8 @@ description: >
 
     {% for media_item in site.data.index.media_items %}
 
-      {% include partials/media-list.html type=media_item.type image=media_item.image title=media_item.title text=media_item.text %}
+     {{ index }}
+      {% include partials/media-list.html type=media_item.type image=media_item.image title=media_item.title text=media_item.text index=forloop.index %}
 
     {% endfor %}
 
