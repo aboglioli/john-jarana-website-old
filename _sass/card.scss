@@ -6,8 +6,7 @@
 
   .card {
     z-index: 5;
-    box-shadow: 0px 0px 5px 0px #000;
-    margin: 0.2em 0.1em;
+    box-shadow: 0px 0px 5px 0px #555;
     position: relative;
 
     figure {
@@ -43,7 +42,7 @@
       padding: 0.5em;
 
       h2 {
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 1.1em;
         margin: 0.5em 0;
         color: #fff;
@@ -53,7 +52,7 @@
       p {
         font-size: 0.8em;
         margin: 0;
-        line-height: 1em;
+        line-height: 1.1em;
       }
     }
 

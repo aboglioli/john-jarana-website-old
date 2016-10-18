@@ -404,15 +404,24 @@ h4 {
       color: #500;
       font-weight: 600;
       font-size: 3.5em;
-      @include text-border(2px, 5px, #914c0a);
+      padding: 20px 0 10px 0;
+      background-color: rgba(200, 200, 200, 0.4);
+      text-shadow: 0 0 10px #ccc;
+      border: 3px solid rgba(200, 200, 200, 0.3);
+      box-shadow: 2px 2px 5px #222;
       &:before {
-        content: "";
-        height: 5px;
+        font-family: FontAwesome;
+        content: "\f08d";
+        font-size: 32px;
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.2);
+        left: calc(50% - 16px);
+        top: -30px;
+        color: rgba(100, 0, 0, .7);
+        text-shadow: none;
+        -ms-transform: rotate(12deg); /* IE 9 */
+        -webkit-transform: rotate(12deg); /* Chrome, Safari, Opera */
+        transform: rotate(12deg);
+        padding-top: 5px;
       }
     }
   }
