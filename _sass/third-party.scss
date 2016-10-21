@@ -1,7 +1,12 @@
 .owl-nav {
-  position: absolute;
-  right: -30px;
-  top: 20px;
+  // position: absolute;
+  // left: calc(50% - 15px);
+  // top: -20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 5px;
+  border-radius: 3px;
+  float: right;
+  border: 1px solid #aaa;
   > div {
     &:hover {
       color: #fff;
@@ -9,7 +14,7 @@
     &:before {
       content: "\f077";
       font-family: 'FontAwesome';
-      color: rgba(255, 255, 255, 0.8);
+      color: #000;
       font-size: 1.8em;
       line-height: 1em;
     }

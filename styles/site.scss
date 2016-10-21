@@ -115,6 +115,7 @@ $form-group-margin-bottom:       30px !default;
 @import 'bootstrap/variables';
 
 // My custom element styles
+@import 'form';
 @import 'third-party';
 @import 'card';
 @import 'util';
@@ -185,8 +186,21 @@ h4 {
 }
 
 .ab-section {
-  min-height: 500px;
   background-color: $ab-section-background-color;
+  padding: 50px 0;
+  overflow: hidden;
+  position: relative;
+
+  .background-container {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .ab-separator {
@@ -319,8 +333,8 @@ h4 {
 
 // HEADER
 #ab-header {
-  @include parallax-background("{{ site.images }}/header-background.png");
-  @include overlay(#222, .3);
+  // @include parallax-background("{{ site.images }}/header-background.png");
+  // @include overlay(#222, .3);
 
   #ab-header-container {
     clear: both;
@@ -333,10 +347,10 @@ h4 {
       height: 230px;
       margin-bottom: 3em;
       img {
-        max-width: 256px;
-        background-color: #fff;
+        max-width: 260px;
+        // background-color: #fff;
         @include border-radius(50%);
-        box-shadow: 0 0 5px #000;
+        // box-shadow: 0 0 5px #000;
       }
     }
     .content {
@@ -388,7 +402,7 @@ h4 {
 
   img.drink-img {
     position: absolute;
-    bottom: -30px;
+    bottom: 0;
     left: 3%;
     max-width: 400px;
     z-index: 10;
@@ -401,27 +415,35 @@ h4 {
       position: relative;
       text-align: center;
       margin: 0px;
-      color: #500;
+      margin-left: -25px;
+      color: rgba(255, 255, 255, 0.5);
       font-weight: 600;
       font-size: 3.5em;
       padding: 20px 0 10px 0;
-      background-color: rgba(200, 200, 200, 0.4);
-      text-shadow: 0 0 10px #ccc;
-      border: 3px solid rgba(200, 200, 200, 0.3);
+      background-image: url(/assets/images/chapa.png);
+      text-shadow: 0 0 10px #000;
       box-shadow: 2px 2px 5px #222;
-      &:before {
-        font-family: FontAwesome;
-        content: "\f08d";
-        font-size: 32px;
-        position: absolute;
-        left: calc(50% - 16px);
-        top: -30px;
-        color: rgba(100, 0, 0, .7);
-        text-shadow: none;
-        -ms-transform: rotate(12deg); /* IE 9 */
-        -webkit-transform: rotate(12deg); /* Chrome, Safari, Opera */
-        transform: rotate(12deg);
-        padding-top: 5px;
+    }
+    .top-pin {
+      z-index: 2;
+      position: absolute;
+      right: 20px;
+      top: 5px;
+      line-height: 0;
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+    .bottom-pin {
+      z-index: 2;
+      position: absolute;
+      right: 20px;
+      bottom: 5px;
+      line-height: 0;
+      img {
+        width: 20px;
+        height: auto;
       }
     }
   }

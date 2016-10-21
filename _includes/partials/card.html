@@ -2,10 +2,9 @@
 
   <figure>
     {% comment %}
-    <img class="card-img" src={{ include.image | prepend: "/images/" | prepend: site.assets }} alt="">
+    <img class="card-img" src={{ include.image | prepend: site.images }} alt="Card Image">
     {% endcomment %}
-    <img class="card-img" src="http://placeimg.com/{{ 200 | minus: include.index
-    }}/220/any" alt="Card Image">
+    <img class="card-img" src={{ include.image }} alt="Card Image">
   </figure>
   <div class="card-body">
     <h2>{{ include.title }}</h2>
