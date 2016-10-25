@@ -19,12 +19,6 @@ description: >
 
   <div class="content col-sm-3 wow fadeInLeft">
     <h1>Título</h1>
-    <span class="top-pin">
-      <img src="{{ site.images }}/tornillo.png" alt="">
-    </span>
-    <span class="bottom-pin">
-      <img src="{{ site.images }}/tornillo.png" alt="">
-    </span>
   </div>
 
 
@@ -37,50 +31,19 @@ description: >
 
 <section class="ab-section">
 
-  <div class="col-sm-10 col-sm-offset-1">
+  <div class="col-sm-12 text-right">
+    <h1 class="right-title">Título</h1>
+  </div>
+
+  <div class="ab-contact col-sm-10 col-sm-offset-1">
     <div class="col-sm-9">
 
-      <form action="" id="contact-form">
-
-        <div class="col-sm-6 contact-half-one">
-          <input type="text" id="name" name="name" placeholder="Nombre" />
-          <input type="text" id="email" name="email" placeholder="E-mail" />
-          <input type="text" id="phone" name="phone" placeholder="Teléfono" />
-          <select id="event" name="event" placeholder="Tipo de evento" style="
-          width: 49%;
-          display: inline-block;
-          ">
-            <option value="" selected disabled>Tipo Evento</option>
-            <option value="otro">Fiesta de 15</option>
-            <option value="otro">Fiesta de 18</option>
-            <option value="otro">Fiesta de 50</option>
-            <option value="otro">Evento empresarial</option>
-            <option value="otro">Fiesta sin alcohol</option>
-            <option value="otro">Fiesta privada</option>
-            <option value="otro">Cena de egresados</option>
-            <option value="otro">Otros</option>
-          </select>
-          <input type="number" id="quantity" name="quantity" placeholder="Cant invitados" style="
-          width: 49.5%;
-          display: inline-block;
-          ">
-        </div>
-
-        <div class="col-sm-6 contact-half-two">
-          <textarea name="comments" cols="40" rows="4" id="comments"
-            onfocus="if(this.value == 'Mensaje') { this.value = ''; }"
-            onblur="if(this.value == '') { this.value = 'Mensaje'; }">Mensaje</textarea>
-        </div>
-
-        <div class="col-sm-12 contact-row text-right">
-          <input type="submit" class="send-button" id="submit" value="Enviar Mensaje">
-        </div>
-
-      </form>
+      {% include contact-form.html %}
 
     </div>
 
     <div class="col-sm-3">
+      <p></p> <!-- Fix it -->
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
         tempor invidunt ut.
@@ -95,40 +58,49 @@ description: >
 
 <!-- SECTION -->
 <section class="ab-section">
-  <div class="background-container">
-    <img src="{{ site.images }}/fondo-slide.jpg" alt="" class="top" />
-    <span class="image-effect"></span>
-  </div>
+  <img src="{{ site.images }}/fondo-slide-curvo.jpg" alt="" class="top wow fadeInUp" />
 
-  <div class="col-sm-10 col-sm-offset-1">
-    <div class="card-container col-sm-12">
+  <div class="ab-section-container">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="card-container col-sm-12">
 
-      <div class="col-sm-4">
-        <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
-          {% for card_item in site.data.index.card_items %}
-          {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
-          {% endfor %}
+        <div class="col-sm-4">
+          <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
+            {% for card_item in site.data.index.card_items %}
+            {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+            {% endfor %}
+          </div>
         </div>
-      </div>
 
-      <div class="col-sm-4">
-        <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
-          {% for card_item in site.data.index.card_items %}
-          {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
-          {% endfor %}
+        <div class="col-sm-4">
+          <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
+            {% for card_item in site.data.index.card_items %}
+            {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+            {% endfor %}
+          </div>
         </div>
-      </div>
 
-      <div class="col-sm-4">
-        <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
-          {% for card_item in site.data.index.card_items %}
-          {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
-          {% endfor %}
+        <div class="col-sm-4">
+          <div class="owl-carousel wow bounceInDown" style="z-index: 10;position: relative;">
+            {% for card_item in site.data.index.card_items %}
+            {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+            {% endfor %}
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 
 </section>
 <!-- SECTION -->
+
+<section class="ab-section">
+  <img src="{{ site.images }}/fondo-marcas.jpg" alt="" class="top wow fadeInDown" />
+
+  <div class="ab-section-container">
+    <div class="col-sm-10 col-sm-offset-1">
+    </div>
+  </div>
+
+</section>
