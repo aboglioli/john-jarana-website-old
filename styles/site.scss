@@ -197,7 +197,7 @@ h4 {
   padding: 15px 50px 10px 50px;
   background-image: url(/assets/images/etiqueta-derecha-e-izq.jpg);
   text-shadow: 0 0 10px #000;
-  box-shadow: 0 3px 5px #222;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
   width: 488px;
   height: 68px;
 }
@@ -205,22 +205,34 @@ h4 {
 .ab-section {
   background-color: $ab-section-background-color;
   padding: 0;
-  overflow: hidden;
   position: relative;
 
-  h1.right-title {
-    @extend .title-with-background;
-    text-align: left;
-    margin-right: -83px;
-    padding-left: 130px;
-    float: right;
+  .ab-title-container {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+
+    h1.right-title {
+      @extend .title-with-background;
+      text-align: left;
+      margin-right: -83px;
+      padding-left: 130px;
+    }
+
+    h1.left-title {
+      @extend .title-with-background;
+      text-align: right;
+      margin-left: -83px;
+      padding-right: 130px;
+    }
   }
 
-  h1.left-title {
-    @extend .title-with-background;
-    text-align: right;
-    margin-left: -150px;
-    float: left;
+  .ab-title-container-left {
+    @extend .ab-title-container;
+    left: 0;
+    top: 0;
   }
 
   img.top {
@@ -242,6 +254,11 @@ h4 {
     }
   }
 
+  .ab-contact {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
 
 }
 
@@ -257,16 +274,10 @@ h4 {
   width: 100%;
 }
 
-.ab-contact {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
 .ab-footer {
   @extend .ab-separator;
-  .overlay {
-    box-shadow: 0 -5px 8px #aaa;
-  }
+  box-shadow: 0 -3px 15px #000;
+  z-index: 2;
 
   .contact-item {
     z-index: 3;
@@ -424,8 +435,7 @@ h4 {
   }
   @media (min-width: 1440px) {
     #ab-header-container {
-      margin-top: 75px;
-      margin-bottom: 75px;
+      margin-top: 100px;
     }
   }
 }
@@ -492,5 +502,15 @@ h4 {
         height: auto;
       }
     }
+  }
+
+  h1.right-title {
+    @extend .title-with-background;
+    text-align: left;
+    margin-right: -83px;
+    padding-left: 130px;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
   }
 }
