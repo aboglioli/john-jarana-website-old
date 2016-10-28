@@ -1,3 +1,52 @@
+# content:
+#   - Con <b>JOHN JARANA</b>...
+#
+#   - Encontra excelentes precios y cartas de tragos adaptados a tu evento con las
+#     <b>CARTAS PERSONALIZADAS</b>.
+#
+#   - Marca tendencia en tu evento contratando el <b>PATIO CERVECERO</b> con
+#     cervezas artesanales buenísimas, tiradas, bien heladas.
+#
+#   - Además podes elegir las variedades de cerveza tirada que más te gusten
+#     porque JOHN JARANA te invita a una <b>DEGUSTACIÓN GRATIS</b> antes del
+#     evento.
+#
+#   - La <b>BARRA JUVENIL</b> es ideal para cumpleaños de 15 o fiestas para los
+#     más chicos y <b>JOHN JARANITA</b> te acompaña con los mejores licuados,
+#     daikiris, batidos y tragos SIN ALCOHOL.
+#
+#   - Y para la fiesta de la empresa te lleva las mejores marcas y tragos modernos
+#     y elegantes para hacer el evento empresarial ideal y que tu gente socialice.
+#
+#   - También lleva <b>BARMANS</b> de primera, que hacen los mejores mojitos de Mendoza,
+#     <b>MOZAS</b> para descongestionar la barra y pasearse con la bandeja para que todos
+#     estén mas cómodos y disfruten del momento.
+#
+#   - Y más... no invitar a <b>JOHN JARANA</b> es lo primero que podes hacer mal.
+#
+#   - ¿Qué esperás?
+
+content:
+  - Excelentes precios y cartas de tragos adaptados a tu evento con las
+    <b>CARTAS PERSONALIZADAS</b>.
+
+  - Marca tendencia en tu evento contratando el <b>PATIO CERVECERO</b> con
+    cervezas artesanales excelentes, tiradas, bien heladas.
+
+  - Variedades de cerveza tirada que más te gusten con una <b>DEGUSTACIÓN
+    GRATIS</b> antes del evento.
+
+  - La <b>BARRA JUVENIL</b> es ideal para cumpleaños de 15 o fiestas para los
+    más chicos y <b>JOHN JARANITA</b> te acompaña con los mejores licuados,
+    daikiris, batidos y tragos SIN ALCOHOL.
+
+  - Las mejores marcas, tragos modernos y elegantes para hacer el evento
+    empresarial ideal y que tu gente socialice.
+
+  - <b>BARMANS</b> de primera, que hacen los mejores mojitos de Mendoza,
+    <b>MOZAS</b> para descongestionar la barra y que todos estén mas cómodos y
+    disfruten del momento.
+
 card_items:
   - image: https://placehold.it/350x350
     title: Gran variedad de tragos
@@ -36,39 +85,39 @@ card_items:
     text: Te ofrecemos una gran variedad de tragos.
 
 
-media_items:
-  - type: left
-    image: icons/beer.svg
-    title: Título
-    text: >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-      vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-      no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    media_items:
+      - type: left
+        image: icons/beer.svg
+        title: Título
+        text: >
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-  - type: right
-    image: icons/wine.svg
-    title: Título
-    text: >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-      vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-      no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      - type: right
+        image: icons/wine.svg
+        title: Título
+        text: >
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-  - type: left
-    image: icons/beer.png
-    title: Título
-    text: >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-      vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-      no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      - type: left
+        image: icons/beer.png
+        title: Título
+        text: >
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-  - type: right
-    image: icons/party.svg
-    title: Título
-    text: >
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-      vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-      no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      - type: right
+        image: icons/party.svg
+        title: Título
+        text: >
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit amet.

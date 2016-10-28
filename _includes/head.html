@@ -1,7 +1,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{% if site.title %}{{ site.title | escape }}{% endif %}</title>
+  {% capture title %}{% if page.title %}{{ page.title | escape }} - {% endif %}{% if site.title %}{{ site.title | escape }}{% endif %}{% endcapture %}
+  <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -9,17 +10,17 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.assets | prepend: site.url }}">
 
   <!-- Facebook and Twitter integration -->
-  <meta property="og:title" content=""/>
-  <meta property="og:image" content=""/>
+  <meta property="og:title" content="{{ title }}"/>
+  <meta property="og:image" content="{{ page.logo }}"/>
   <meta property="og:url" content=""/>
-  <meta property="og:site_name" content=""/>
-  <meta property="og:description" content=""/>
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:image" content="" />
+  <meta property="og:site_name" content="{{ title }}"/>
+  <meta property="og:description" content="{{ page.meta-description }}"/>
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:image" content="{{ page.logo }}" />
   <meta name="twitter:url" content="" />
   <meta name="twitter:card" content="" />
 
-  <link rel="shortcut icon" href={{ "/images/favicon.png" | prepend: site.assets }}>
+  <link rel="shortcut icon" href="{{ site.images }}/favicon.png">
 
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Montserrat:400,700' rel='stylesheet' type='text/css'>

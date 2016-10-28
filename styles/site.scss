@@ -2,7 +2,7 @@
 ---
 
 $font-primary: 'CarrigRefined', Arial, sans-serif;
-$font-secondary: 'Din Pro', Arial, sans-serif;
+$font-secondary: 'DIN Pro Black', Arial, sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -16,13 +16,12 @@ $brand-black: #000;
 $brand-darker: #444;
 $brand-body-color: #818892;
 $brand-selection-color: #f9f6f0;
-$brand-bg-color: $brand-white;
 
+$body-background-color: #eee;
 $ab-section-background-color: #eee;
 
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
-
 
 // Mixin
 @mixin transition($transition) {
@@ -115,11 +114,11 @@ $form-group-margin-bottom:       30px !default;
 @import 'bootstrap/variables';
 
 // My custom element styles
+@import 'section';
 @import 'form';
 @import 'third-party';
 @import 'card';
 @import 'util';
-
 
 /* =======================================================
 *
@@ -135,7 +134,7 @@ body {
   line-height: 1.8;
   color: lighten($brand-darker, 20%);
   color: #7f7f7f;
-  background: $brand-bg-color;
+  background: $body-background-color;
   height: 100%;
   position: relative;
 
@@ -179,136 +178,6 @@ h4 {
 ::selection {
   color: $brand-body-color;
   background: $brand-selection-color;
-}
-
-.content {
-  z-index: 3;
-}
-
-.title-with-background {
-  z-index: 2;
-  position: relative;
-  // text-align: right;
-  margin: 0px;
-  // margin-left: -150px;
-  color: rgba(255, 255, 255, 1);
-  font-weight: 600;
-  font-size: 2.5em;
-  padding: 15px 50px 10px 50px;
-  background-image: url(/assets/images/etiqueta-derecha-e-izq.jpg);
-  text-shadow: 0 0 10px #000;
-  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
-  width: 488px;
-  height: 68px;
-}
-
-.ab-section {
-  background-color: $ab-section-background-color;
-  padding: 0;
-  position: relative;
-
-  .ab-title-container {
-    position: absolute;
-    right: 0;
-    top: -30px;
-    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-
-    h1.right-title {
-      @extend .title-with-background;
-      text-align: left;
-      margin-right: -83px;
-      padding-left: 130px;
-    }
-
-    h1.left-title {
-      @extend .title-with-background;
-      text-align: right;
-      margin-left: -83px;
-      padding-right: 130px;
-    }
-  }
-
-  .ab-title-container-left {
-    @extend .ab-title-container;
-    left: 0;
-    top: 0;
-  }
-
-  img.top {
-    position: relative;
-    float: left;
-    z-index: 2;
-    width: 100%;
-  }
-
-  .ab-section-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 50px 0;
-
-    div {
-      z-index: 2;
-    }
-  }
-
-  .ab-contact {
-    margin-top: 100px;
-    margin-bottom: 50px;
-  }
-
-
-}
-
-.ab-separator {
-  height: 150px;
-  // background-color: #333;
-  text-align: center;
-  background: url("{{ site.images }}/tabla-pie-de-pagina.jpg");
-  background-size: 100% 100%;
-  background-repeat: repeat;
-  position: relative;
-  float: left;
-  width: 100%;
-}
-
-.ab-footer {
-  @extend .ab-separator;
-  box-shadow: 0 -3px 15px #000;
-  z-index: 2;
-
-  .contact-item {
-    z-index: 3;
-    position: relative;
-    color: #fff;
-    font-size: 1.5em;
-    top: 40px;
-    text-shadow: 0 0 5px #000;
-
-    img {
-      width: 64px;
-      display: inline-block;
-    }
-
-    p {
-      display: inline-block;
-      margin: 0;
-      vertical-align: middle;
-      margin-left: 5px;
-
-      a {
-        color: #fff;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-    }
-
-  }
 }
 
 // NAVBAR
@@ -433,84 +302,153 @@ h4 {
       }
     }
   }
-  @media (min-width: 1440px) {
-    #ab-header-container {
-      margin-top: 100px;
+}
+
+// SECTIONS
+#ab-main {
+  @extend .ab-section;
+
+  .ab-section-background {
+    img.top {
+      top: -50px;
+    }
+    img.icon {
+      bottom: -35px;
+    }
+  }
+
+  .ab-section-container {
+    .ab-body {
+      padding-top: 60px;
+      .left-content {
+        width: 25%;
+      }
+      .right-content {
+        width: 75%;
+        padding: 0 50px;
+        color: #000;
+
+        .card-container {
+          padding: .5vw;
+          font-size: 16px;
+          display: -ms-flexbox;
+          -ms-flex-wrap: wrap;
+          -ms-flex-direction: column;
+          -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
+          display: -webkit-box;
+          display: flex;
+          justify-content: center; /* align horizontal */
+          align-items: center; /* align vertical */
+
+          .card {
+            -webkit-box-flex: auto;
+            -ms-flex: auto;
+            flex: auto;
+            width: 300px;
+            margin: .5vw;
+            justify-content: center;
+            align-items: center;
+            background-color: #e6994b;
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 15px;
+            padding: 20px;
+            padding-top: 30px;
+            transform: rotate(2deg);
+
+            &:before {
+              content: "\f08d";
+              font-family: FontAwesome;
+              font-size: 32px;
+              transform: rotate(15deg);
+              color: #b00;
+              position: absolute;
+              top: -23px;
+              left: calc(50% - 16px);
+              text-shadow: 1px -2px 2px #000;
+            }
+
+            p {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+      }
     }
   }
 }
 
-
-// MAIN SECTION
-#ab-main {
-  .background-container {
-    position: absolute;
-    top: -60px;
-    z-index: 2;
-    width: 100%;
-    left: 0;
-    img {
-      width: 100%;
+#ab-contact {
+  @extend .ab-section;
+  .ab-section-container {
+    .ab-title {
+      right: 0;
+      top: -70px;
     }
-  }
-
-  @include overlay(#222, 0.2);
-  .overlay {
-    z-index: 3;
-  }
-
-  min-height: 550px;
-  background-color: $ab-section-background-color;
-  padding: 50px 0;
-  position: relative;
-
-  img.drink-img {
-    position: absolute;
-    bottom: 0;
-    left: 3%;
-    max-width: 400px;
-    z-index: 10;
-  }
-
-  .content {
-    max-width: 100%;
-    h1 {
-      @extend .title-with-background;
-      text-align: right;
-      margin-left: -83px;
-      padding-right: 130px;
-    }
-    .top-pin {
-      z-index: 2;
-      position: absolute;
-      right: 20px;
-      top: 5px;
-      line-height: 0;
-      img {
-        width: 20px;
-        height: auto;
+    .ab-body {
+      .left-content {
+        width: 70%;
+        padding: 100px 40px;
       }
-    }
-    .bottom-pin {
-      z-index: 2;
-      position: absolute;
-      right: 20px;
-      bottom: 5px;
-      line-height: 0;
-      img {
-        width: 20px;
-        height: auto;
+      .right-content {
+        width: 30%;
+        padding: 50px 0;
+        .ab-content {
+          h2 {
+            font-family: $font-secondary;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            font-weight: 400;
+          }
+          p {
+            margin-bottom: 3px;
+            font-size: 1em;
+            padding-left: 5px;
+          }
+        }
       }
     }
   }
+}
 
-  h1.right-title {
-    @extend .title-with-background;
-    text-align: left;
-    margin-right: -83px;
-    padding-left: 130px;
-    position: absolute;
-    right: 0;
-    bottom: -40px;
+#ab-footer {
+  @extend .ab-section;
+  box-shadow: 0 -3px 15px #000;
+
+  .ab-section-container {
+    .ab-body {
+      .contact-item {
+        z-index: 3;
+        position: relative;
+        color: #000;
+        font-size: 2em;
+        top: 40px;
+        text-shadow: 0 0 3px #fff;
+
+        img {
+          width: 64px;
+          display: inline-block;
+        }
+
+        p {
+          display: inline-block;
+          margin: 0;
+          vertical-align: middle;
+          margin-left: 5px;
+
+          a {
+            color: #000;
+            text-decoration: none;
+            &:hover {
+              text-shadow: 0 2px 8px #fff;
+            }
+          }
+
+        }
+
+      }
+    }
   }
 }

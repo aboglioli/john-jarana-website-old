@@ -1,107 +1,134 @@
 ---
 layout: default
 title: Barra Móvil de Tragos en Mendoza
+meta-description: Barras móviles de tragos para eventos y fiestas en Mendoza.
 logo: Logo-circular-sobre-madera.png
 background-image: header-background.png
 description: >
-  Breve descripción. Muy breve, pero que explique bien lo que debería explicar bien. Sólo a modo de prueba.
+  Barras móviles de tragos para envetos y fiestas en Mendoza.
 ---
 
 <!-- MAIN -->
 <section id="ab-main">
-
-  <div class="background-container">
+  <div class="ab-section-background">
     <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" />
-    <img src="{{ site.images }}/medio.jpg" alt="" class="middle" />
-    <img src="{{ site.images }}/tablas-abajo.png" alt="" class="bottom" />
+    <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
+    <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" />
+    <img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">
   </div>
 
+  <div class="ab-section-container">
+    <div class="ab-body">
 
-  <div class="content col-sm-3 wow fadeInLeft">
-    <h1>Título</h1>
+      <div class="left-content">
+        <div class="ab-title wow fadeInLeft">
+          <h1 class="left-title">Información</h1>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="card-container">
+        {% for paragraph in site.data.index.content %}
+          <div class="card">
+            <p>
+              {{ paragraph }}
+            </p>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+
+    </div>
   </div>
-
-
-  <img src={{ "beer3.png" | prepend: "/images/" | prepend: site.assets }} alt="" class="drink-img wow bounceInDown">
-
 
   <div class="clearfix"></div>
 
 </section>
 <!-- MAIN -->
 
-<section class="ab-section">
+<!-- CONTACT -->
+<section id="ab-contact">
+  <div class="ab-section-container-relative">
 
-  <div class="ab-title-container wow fadeInRight">
-    <h1 class="right-title">Título</h1>
-  </div>
+    <div class="ab-body">
 
-  <div class="ab-contact col-sm-10 col-sm-offset-1">
-    <div class="col-sm-9">
+      <div class="left-content">
+        {% include contact-form.html %}
+      </div>
 
-      {% include contact-form.html %}
+      <div class="right-content wow pulse">
+
+        <div class="ab-title wow fadeInRight">
+          <h1 class="right-title">Contacto</h1>
+        </div>
+
+        <div class="ab-content">
+          <h2>¿Querés saber algo más?</h2>
+          <p class="dark">
+            Tranquilo, acá te dejamos el formulario y el teléfono con Whatsapp.
+          </p>
+          <p class="dark">
+            Estamos a tu disposición para cualquier consulta.
+          </p>
+        </div>
+      </div>
 
     </div>
-
-    <div class="col-sm-3 wow pulse">
-      <p></p> <!-- Fix it -->
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut.
-      </p>
-    </div>
-
   </div>
 
   <div class="clearfix"></div>
-
 </section>
+<!-- CONTACT -->
 
-<!-- SECTION -->
+{% comment %}
 <section class="ab-section">
-  <img src="{{ site.images }}/fondo-slide-curvo.jpg" alt="" class="top wow fadeInUp" />
+  <div class="ab-section-background">
+    <img src="{{ site.images }}/fondo-slide-curvo.jpg" alt="" class="top wow fadeInUp" />
+  </div>
 
   <div class="ab-section-container">
-    <div class="col-sm-10 col-sm-offset-1">
-      <div class="card-container col-sm-12">
+    <div class="ab-body">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="card-container col-sm-12">
 
-        <div class="col-sm-4">
-          <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
-            {% for card_item in site.data.index.card_items %}
-            {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
-            {% endfor %}
+          <div class="col-sm-4">
+            <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
+              {% for card_item in site.data.index.card_items %}
+              {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+              {% endfor %}
+            </div>
           </div>
-        </div>
 
-        <div class="col-sm-4">
-          <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
-            {% for card_item in site.data.index.card_items %}
-            {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
-            {% endfor %}
+          <div class="col-sm-4">
+            <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
+              {% for card_item in site.data.index.card_items %}
+              {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+              {% endfor %}
+            </div>
           </div>
-        </div>
 
-        <div class="col-sm-4">
-          <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
-            {% for card_item in site.data.index.card_items %}
-            {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
-            {% endfor %}
+          <div class="col-sm-4">
+            <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
+              {% for card_item in site.data.index.card_items %}
+              {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+              {% endfor %}
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
 
 </section>
-<!-- SECTION -->
 
 <section class="ab-section">
-  <img src="{{ site.images }}/fondo-marcas.jpg" alt="" class="top wow fadeInDown" />
+  <div class="ab-section-background">
+    <img src="{{ site.images }}/fondo-marcas.jpg" alt="" class="top wow fadeInDown" />
+  </div>
 
   <div class="ab-section-container">
-    <div class="col-sm-10 col-sm-offset-1">
-    </div>
   </div>
 
 </section>
+{% endcomment %}

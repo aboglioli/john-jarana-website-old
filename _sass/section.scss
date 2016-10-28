@@ -1,0 +1,121 @@
+.title-with-background {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  font-size: 2.5em;
+  padding: 15px 50px 10px 50px;
+  background-image: url(/assets/images/etiqueta-derecha-e-izq.jpg);
+  text-shadow: 0 0 10px #000;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  text-align: center;
+  height: 68px;
+}
+
+.ab-section {
+  background-color: $ab-section-background-color;
+  padding: 0;
+  position: relative;
+
+  .ab-section-background {
+    position: relative;
+    float: left;
+    z-index: 2;
+    width: 100%;
+    img.top {
+      position: relative;
+      float: left;
+      z-index: 2;
+      width: 100%;
+    }
+    img.icon {
+      position: absolute;
+      bottom: 0;
+      left: 3%;
+      max-width: 300px;
+      z-index: 10;
+    }
+  }
+
+  .ab-section-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    .ab-title {
+      position: relative;
+      width: 100%;
+      box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+
+      h1.right-title {
+        @extend .title-with-background;
+        background-position: left bottom;
+      }
+
+      h1.left-title {
+        @extend .title-with-background;
+        background-position: right bottom;
+      }
+    }
+
+    .ab-content {
+      position: relative;
+      width: 100%;
+    }
+
+    .ab-body {
+      width: 100%;
+      .left-content {
+        width: 50%;
+        float: left;
+        position: relative;
+        margin: 0;
+      }
+      .right-content {
+        width: 50%;
+        float: left;
+        position: relative;
+        margin: 0;
+      }
+      p {
+        margin-bottom: 8px;
+      }
+      p.dark {
+        color: #555;
+      }
+      p.light {
+        color: #fff;
+      }
+    }
+
+    div {
+      z-index: 2;
+    }
+  }
+
+  .ab-section-container-relative {
+    @extend .ab-section-container;
+    position: relative;
+    float: left;
+  }
+
+}
+
+.ab-separator {
+  height: 150px;
+  // background-color: #333;
+  text-align: center;
+  background: url("{{ site.images }}/tabla-pie-de-pagina.jpg");
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
