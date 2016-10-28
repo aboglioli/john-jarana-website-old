@@ -14,21 +14,22 @@ description: >
     <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" />
     <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
     <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" />
-    <img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">
+    {% comment %}<img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">{% endcomment %}
   </div>
 
   <div class="ab-section-container">
     <div class="ab-body">
 
-      <div class="left-content">
+      <div class="ab-row">
         <div class="ab-title wow fadeInLeft">
-          <h1 class="left-title">Información</h1>
+          <h1>¿Qué te propone John Jarana?</h1>
         </div>
       </div>
 
-      <div class="right-content">
+      <div class="ab-row">
         <div class="card-container">
         {% for paragraph in site.data.index.content %}
+          {% assign mod = forloop.index | modulo: 2 %}
           <div class="card">
             <p>
               {{ paragraph }}
@@ -52,17 +53,14 @@ description: >
 
     <div class="ab-body">
 
-      <div class="left-content">
-        {% include contact-form.html %}
+      <div class="ab-row">
+        <div class="ab-title wow fadeInLeft">
+          <h1>Formulario</h1>
+        </div>
       </div>
 
-      <div class="right-content wow pulse">
-
-        <div class="ab-title wow fadeInRight">
-          <h1 class="right-title">Contacto</h1>
-        </div>
-
-        <div class="ab-content">
+      <div class="ab-row">
+        <div class="content col-sm-10 col-sm-offset-1">
           <h2>¿Querés saber algo más?</h2>
           <p class="dark">
             Tranquilo, acá te dejamos el formulario y el teléfono con Whatsapp.
@@ -71,6 +69,11 @@ description: >
             Estamos a tu disposición para cualquier consulta.
           </p>
         </div>
+
+        <div class="form-contact col-sm-8 col-sm-offset-2">
+          {% include contact-form.html %}
+        </div>
+
       </div>
 
     </div>
@@ -80,7 +83,6 @@ description: >
 </section>
 <!-- CONTACT -->
 
-{% comment %}
 <section class="ab-section">
   <div class="ab-section-background">
     <img src="{{ site.images }}/fondo-slide-curvo.jpg" alt="" class="top wow fadeInUp" />
@@ -131,4 +133,3 @@ description: >
   </div>
 
 </section>
-{% endcomment %}

@@ -3,7 +3,7 @@
 
 $font-primary: 'CarrigRefined', Arial, sans-serif;
 $font-secondary: 'Montserrat', Arial, sans-serif;
-$font-subtitle: 'DIN Pro Black', Arial, sans-serif;
+$font-subtitle: 'DIN Pro', Arial, sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -213,7 +213,7 @@ h4 {
           position: relative;
           display: block;
           padding-bottom: 2px;
-          font-family: $font-primary;
+          font-family: $font-subtitle;
           &:before {
             content: "";
             position: absolute;
@@ -282,9 +282,10 @@ h4 {
       }
     }
     .content {
-      margin-bottom: 3em;
+      margin-bottom: 2em;
       color: white;
       text-shadow: 0 0 2px #000;
+      font-size: 20px;
     }
     .button {
       button {
@@ -315,64 +316,45 @@ h4 {
     }
     img.icon {
       bottom: -35px;
+      left: calc(50% - 100px);
+      width: 300px;
     }
   }
 
   .ab-section-container {
     .ab-body {
-      padding-top: 60px;
-      .left-content {
-        width: 25%;
-      }
-      .right-content {
-        width: 75%;
+      .ab-row {
         padding: 0 50px;
         color: #000;
         overflow: inherit;
 
+        .ab-title {
+          margin-top: 30px;
+          margin-bottom: 25px;
+        }
+
         .card-container {
           padding: .5vw;
           font-size: 16px;
-          display: -ms-flexbox;
-          -ms-flex-wrap: wrap;
-          -ms-flex-direction: column;
-          -webkit-flex-flow: row wrap;
-          flex-flow: row wrap;
-          display: -webkit-box;
-          display: flex;
-          justify-content: center; /* align horizontal */
-          align-items: center; /* align vertical */
           overflow: inherit;
 
           .card {
-            -webkit-box-flex: auto;
-            -ms-flex: auto;
-            flex: auto;
-            width: 300px;
+            display: flex;
+            align-items: center;
             margin: .5vw;
             background-color: #fece83;
             box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
             margin: 5px;
             padding: 8px;
-            padding-top: 30px;
-            transform: rotate(2deg);
-
-            &:before {
-              content: "\f08d";
-              font-family: FontAwesome;
-              font-size: 32px;
-              transform: rotate(-25deg);
-              color: rgba(200, 0, 0, 1);
-              position: absolute;
-              top: -30px;
-              left: calc(50% - 16px);
-              text-shadow: -1px -2px 5px #000;
-            }
+            width: 32%;
+            float: left;
+            min-height: 150px;
 
             p {
               width: 100%;
               height: auto;
               font-size: 13px;
+              margin: 0;
             }
           }
         }
@@ -385,30 +367,26 @@ h4 {
 #ab-contact {
   @extend .ab-section;
   .ab-section-container {
-    .ab-title {
-      right: 0;
-      top: -70px;
-    }
     .ab-body {
-      .left-content {
-        width: 70%;
-        padding: 100px 40px;
-      }
-      .right-content {
-        width: 30%;
-        padding: 50px 0;
-        .ab-content {
+      .ab-row {
+        .content {
           h2 {
             font-family: $font-subtitle;
             text-transform: uppercase;
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-weight: 400;
+            text-align: center;
           }
           p {
             margin-bottom: 3px;
-            font-size: 1em;
+            font-size: 0.9em;
             padding-left: 5px;
+            text-align: center;
           }
+        }
+        .form-contact {
+          padding: 30px 0;
+          padding-bottom: 60px;
         }
       }
     }
@@ -454,3 +432,5 @@ h4 {
     }
   }
 }
+
+@import 'mobile';
