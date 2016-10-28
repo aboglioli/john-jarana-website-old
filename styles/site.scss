@@ -2,7 +2,8 @@
 ---
 
 $font-primary: 'CarrigRefined', Arial, sans-serif;
-$font-secondary: 'DIN Pro Black', Arial, sans-serif;
+$font-secondary: 'Montserrat', Arial, sans-serif;
+$font-subtitle: 'DIN Pro Black', Arial, sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -327,6 +328,7 @@ h4 {
         width: 75%;
         padding: 0 50px;
         color: #000;
+        overflow: inherit;
 
         .card-container {
           padding: .5vw;
@@ -340,6 +342,7 @@ h4 {
           display: flex;
           justify-content: center; /* align horizontal */
           align-items: center; /* align vertical */
+          overflow: inherit;
 
           .card {
             -webkit-box-flex: auto;
@@ -347,12 +350,10 @@ h4 {
             flex: auto;
             width: 300px;
             margin: .5vw;
-            justify-content: center;
-            align-items: center;
-            background-color: #e6994b;
+            background-color: #fece83;
             box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
-            margin: 15px;
-            padding: 20px;
+            margin: 5px;
+            padding: 8px;
             padding-top: 30px;
             transform: rotate(2deg);
 
@@ -360,17 +361,18 @@ h4 {
               content: "\f08d";
               font-family: FontAwesome;
               font-size: 32px;
-              transform: rotate(15deg);
-              color: #b00;
+              transform: rotate(-25deg);
+              color: rgba(200, 0, 0, 1);
               position: absolute;
-              top: -23px;
+              top: -30px;
               left: calc(50% - 16px);
-              text-shadow: 1px -2px 2px #000;
+              text-shadow: -1px -2px 5px #000;
             }
 
             p {
               width: 100%;
               height: auto;
+              font-size: 13px;
             }
           }
         }
@@ -397,7 +399,7 @@ h4 {
         padding: 50px 0;
         .ab-content {
           h2 {
-            font-family: $font-secondary;
+            font-family: $font-subtitle;
             text-transform: uppercase;
             font-size: 1.4em;
             font-weight: 400;
