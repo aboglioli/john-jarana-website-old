@@ -4,6 +4,7 @@
 $font-primary: 'CarrigRefined', Arial, sans-serif;
 $font-secondary: 'Montserrat', Arial, sans-serif;
 $font-subtitle: 'DIN Pro', Arial, sans-serif;
+$font-navbar: 'DIN Pro Black', Arial, sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -193,9 +194,9 @@ h4 {
     border-radius: 0.2em;
     margin-top: 2em;
     padding: 0 1.5em;
-    // box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.1);
     margin-bottom: 2em;
     list-style: none;
+    padding: 5px 15px;
     li {
       display: inline-block;
       padding: .15em .5em;
@@ -213,7 +214,7 @@ h4 {
           position: relative;
           display: block;
           padding-bottom: 2px;
-          font-family: $font-subtitle;
+          font-family: $font-navbar;
           &:before {
             content: "";
             position: absolute;
@@ -236,9 +237,7 @@ h4 {
           }
         }
         &:hover {
-          // color: $brand-primary;
           color: $brand-white;
-          // color: rgba(255,255,255,1);
           span {
             &:before {
               visibility: visible;
@@ -356,6 +355,14 @@ h4 {
               font-size: 13px;
               margin: 0;
             }
+
+            .card-icon {
+              width: 32px;
+              height: auto;
+              position: absolute;
+              left: -16px;
+              top: -16px;
+            }
           }
         }
 
@@ -399,35 +406,64 @@ h4 {
 
   .ab-section-container {
     .ab-body {
-      .contact-item {
-        z-index: 3;
+      .contact-items {
         position: relative;
-        color: #000;
-        font-size: 1.5em;
-        top: 40px;
-        text-shadow: 0 0 3px #fff;
+        top: 30px;
+        overflow: hidden;
 
-        img {
-          width: 64px;
-          display: inline-block;
-        }
+        .contact-item {
+          z-index: 3;
+          color: #000;
+          font-size: 1.2em;
+          text-shadow: 0 0 3px #fff;
 
-        p {
-          display: inline-block;
-          margin: 0;
-          vertical-align: middle;
-          margin-left: 5px;
+          img {
+            width: 32px;
+            display: inline-block;
+          }
 
-          a {
-            color: #000;
-            text-decoration: none;
-            &:hover {
-              text-shadow: 0 2px 8px #fff;
+          p {
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+            margin-left: 5px;
+
+            a {
+              color: #000;
+              text-decoration: none;
+              &:hover {
+                text-shadow: 0 2px 8px #fff;
+              }
             }
+
           }
 
         }
+      }
 
+      .developer {
+        z-index: 3;
+        position: relative;
+        font-size: 1.2em;
+        margin-top: 30px;
+
+        p {
+          display: inline-block;
+          background-color: rgba(0, 0, 0, 0.3);
+          padding: 0 12px;
+          color: #fff;
+          text-shadow: none;
+          box-shadow: none;
+          margin-top: 15px;
+
+          a {
+            color: white;
+            font-weight: 600;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
       }
     }
   }

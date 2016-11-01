@@ -1,40 +1,43 @@
 ---
 layout: default
 
-title: Barra Móvil de Tragos en Mendoza
+title: Patio Cervecero en Mendoza
 meta-description: Barras móviles de tragos para eventos y fiestas en Mendoza.
 
-header-content: true
+header-content: false
 logo: Logo-circular-sobre-madera.png
-background-image: header-background.png
+background-image: fondo-patio-cervecero.jpg
 description: >
   Barras móviles de tragos para eventos y fiestas en Mendoza.
+
+form-type: wood-background
 ---
 
 <!-- MAIN -->
+{% comment %}
 <section id="ab-main">
   <div class="ab-section-background">
     <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" />
     <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
     <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" />
-    {% comment %}<img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">{% endcomment %}
   </div>
 
   <div class="ab-section-container">
     <div class="ab-body">
 
       <div class="ab-row">
-        <div class="ab-title wow fadeInDown">
+        <div class="ab-title wow fadeInLeft">
           <h1>¿Qué te propone John Jarana?</h1>
         </div>
       </div>
 
       <div class="ab-row">
         <div class="card-container">
-        {% for paragraph in site.data.index.content %}
+        {% for paragraph in site.data.patio-cervecero.content %}
           <div class="card">
-            {% comment %}<img src="{{ site.images }}/beer-icon.png" alt="" class="card-icon"/>{% endcomment %}
-            <p>{{ paragraph }}</p>
+            <p>
+              {{ paragraph }}
+            </p>
           </div>
         {% endfor %}
         </div>
@@ -46,4 +49,5 @@ description: >
   <div class="clearfix"></div>
 
 </section>
+{% endcomment %}
 <!-- MAIN -->

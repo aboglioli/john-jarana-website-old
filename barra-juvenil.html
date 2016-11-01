@@ -1,14 +1,14 @@
 ---
 layout: default
 
-title: Barra Móvil de Tragos en Mendoza
+title: Patio Cervecero en Mendoza
 meta-description: Barras móviles de tragos para eventos y fiestas en Mendoza.
 
-header-content: true
-logo: Logo-circular-sobre-madera.png
-background-image: header-background.png
-description: >
-  Barras móviles de tragos para eventos y fiestas en Mendoza.
+header-content: false
+header-content-type: left
+background-image: fondo-barra-juvenil.jpg
+
+navbar-color: "#000"
 ---
 
 <!-- MAIN -->
@@ -24,17 +24,18 @@ description: >
     <div class="ab-body">
 
       <div class="ab-row">
-        <div class="ab-title wow fadeInDown">
+        <div class="ab-title wow fadeInLeft">
           <h1>¿Qué te propone John Jarana?</h1>
         </div>
       </div>
 
       <div class="ab-row">
         <div class="card-container">
-        {% for paragraph in site.data.index.content %}
+        {% for paragraph in site.data.barra-juvenil.content %}
           <div class="card">
-            {% comment %}<img src="{{ site.images }}/beer-icon.png" alt="" class="card-icon"/>{% endcomment %}
-            <p>{{ paragraph }}</p>
+            <p>
+              {{ paragraph }}
+            </p>
           </div>
         {% endfor %}
         </div>

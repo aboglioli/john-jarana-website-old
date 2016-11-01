@@ -1,0 +1,40 @@
+<section class="ab-section">
+  <div class="ab-section-background">
+    <img src="{{ site.images }}/fondo-slide-curvo.jpg" alt="" class="top wow fadeInUp" />
+  </div>
+
+  <div class="ab-section-container">
+    <div class="ab-body">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="card-container col-sm-12">
+
+          <div class="col-sm-4">
+            <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
+              {% for card_item in site.data.index.card_items %}
+              {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
+              {% for card_item in site.data.index.card_items %}
+              {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="owl-carousel wow swing" style="z-index: 10;position: relative;">
+              {% for card_item in site.data.index.card_items %}
+              {% include partials/card.html image=card_item.image title=card_item.title text=card_item.text index=forloop.index %}
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
