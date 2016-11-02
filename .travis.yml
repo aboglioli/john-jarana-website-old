@@ -5,4 +5,3 @@ node_js:
 deploy:
   provider: surge
   project: ./_site/
-  domain: barramovilmendoza.com.ar
