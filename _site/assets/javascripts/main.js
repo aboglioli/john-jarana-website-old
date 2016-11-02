@@ -14,9 +14,11 @@ jQuery(function($) {
   $(".owl-carousel").owlCarousel({
     loop: true,
     autoplay: true,
-    items: 2,
-    margin: 30,
+    items: 1,
+    margin: 0,
     nav: false,
     autoplayHoverPause: true,
+    animateOut: 'slideOutUp',
+    animateIn: 'slideInUp'
   });
 });

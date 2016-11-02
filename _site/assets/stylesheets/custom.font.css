@@ -56,12 +56,12 @@ src: local('DIN Pro Black'), url('/assets/fonts/din-pro/DINPro-Black.woff') form
 /* } */
 /*  */
 /*  */
-/* @font-face { */
-/* font-family: 'DIN Pro'; */
-/* font-style: normal; */
-/* font-weight: normal; */
-/* src: local('DIN Pro'), url('DINPro.woff') format('woff'); */
-/* } */
+@font-face {
+font-family: 'DIN Pro';
+font-style: normal;
+font-weight: normal;
+src: local('DIN Pro'), url('/assets/fonts/din-pro/DINPro.woff') format('woff');
+}
 /*  */
 /*  */
 /* @font-face { */
