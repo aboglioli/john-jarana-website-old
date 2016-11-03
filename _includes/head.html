@@ -77,6 +77,19 @@
 
   <script src={{ "/javascripts/parallax.min.js" | prepend: site.assets }}></script>
 
+  <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAERhm4hw0QCBBXS_-IL2pcxvv-ZUqrdMk",
+      authDomain: "contact-form-91ea2.firebaseapp.com",
+      databaseURL: "https://contact-form-91ea2.firebaseio.com",
+      storageBucket: "contact-form-91ea2.appspot.com",
+      messagingSenderId: "862668692236"
+    };
+    var firebaseContact = firebase.initializeApp(config);
+  </script>
+
   <script src={{ "/javascripts/main.js" | prepend: site.assets }}></script>
 
   <script>
