@@ -13,33 +13,28 @@ description: >
 form-type: wood-background
 ---
 
+<!-- HEADER -->
+{% include header.html background-image=page.background-image %}
+<!-- HEADER -->
+
 <!-- MAIN -->
-{% comment %}
-<section id="ab-main">
+<section id="ab-main" style="background-color: #000">
   <div class="ab-section-background">
-    <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" />
-    <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
-    <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" />
+    {% include partials/wood-background.html margin-bottom="-100px "%}
   </div>
 
   <div class="ab-section-container">
     <div class="ab-body">
 
       <div class="ab-row">
-        <div class="ab-title wow fadeInLeft">
-          <h1>¿Qué te propone John Jarana?</h1>
+        <div class="ab-title wow fadeInDown">
+          <h1>Consultas</h1>
         </div>
       </div>
 
       <div class="ab-row">
-        <div class="card-container">
-        {% for paragraph in site.data.patio-cervecero.content %}
-          <div class="card">
-            <p>
-              {{ paragraph }}
-            </p>
-          </div>
-        {% endfor %}
+        <div class="form-contact col-sm-8 col-sm-offset-2">
+          {% include contact-form.html %}
         </div>
       </div>
 
@@ -49,5 +44,4 @@ form-type: wood-background
   <div class="clearfix"></div>
 
 </section>
-{% endcomment %}
 <!-- MAIN -->

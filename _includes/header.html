@@ -1,70 +1,10 @@
 <!-- HEADER -->
 <header role="banner" id="ab-header" class="parallax-window"
-  data-parallax="scroll" data-image-src="{{ site.images }}/{{ page.background-image }}"
+  data-parallax="scroll" data-image-src="{{ site.images }}/{{ include.background-image }}"
   style="min-height: 800px">
 
-  <!-- <div class="overlay"></div> -->
+  {% include navbar.html %}
 
-  <nav id="ab-navbar" class="wow fadeInDown">
-    <ul class="ab-nav">
-      {% if page.navbar-color %}
-      <style>
-        #ab-navbar .ab-nav li a {
-          color: {{ page.navbar-color }};
-        }
-
-        #ab-navbar .ab-nav li a:hover {
-          color: {{ page.navbar-color }};
-        }
-
-        #ab-navbar .ab-nav li.active a {
-          color: {{ page.navbar-color }};
-        }
-
-        #ab-navbar .ab-nav li a span:before {
-          background-color: {{ page.navbar-color }};
-        }
-      </style>
-      {% endif %}
-      <li class="{% if page.url == "/" %}active{% endif %}">
-        <a href="/"><span>Inicio</span></a>
-      </li>
-      <li class="{% if page.url == "/patio-cervecero.html" %}active{% endif %}">
-        <a href="/patio-cervecero"><span>Patio Cervecero</span></a>
-      </li>
-      <li class="{% if page.url == "/barra-juvenil.html" %}active{% endif %}">
-        <a href="/barra-juvenil"><span>Barra Juvenil</span></a>
-      </li>
-      <li class="{% if page.url == "/eventos-empresariales.html" %}active{% endif %}">
-        <a href="/eventos-empresariales"><span>Eventos Empresariales</span></a>
-      </li>
-      <li class="{% if page.url == "/bodas-y-fiestas.html" %}active{% endif %}">
-        <a href="/bodas-y-fiestas"><span>Bodas y Fiestas</span></a>
-      </li>
-      {% comment %}
-      <li class="{% if page.url == "/nuestro-trabajo.html" %}active{% endif %}">
-        <a href="/nuestro-trabajo"><span>Nuestro Trabajo</span></a>
-      </li>
-      {% endcomment %}
-    </ul>
-  </nav>
-
-  {% if page.header-content %}
-  <div id="ab-header-container">
-    <div class="col-sm-4 col-sm-offset-4">
-      <div class="logo">
-        <img src="{{ site.images }}/{{ page.logo }}"
-        alt="{{ page.description }}" class="wow tada" data-wow-duration="2s" data-wow-iteration="2" />
-      </div>
-      <div class="content wow fadeIn">
-        {{ page.description }}
-      </div>
-      <div class="button">
-        <button class="wow flipInX" data-wow-delay="1s">¡Pedí tu presupuesto!</button>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-  {% endif %}
+  {{ header-content }}
 
 </header>

@@ -205,7 +205,7 @@ h4 {
         color: rgba(255, 255, 255, 0.75);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 0.8em;
+        font-size: 1em;
         // letter-spacing: 0.25em;
         height: 5em;
         line-height: 1em;
@@ -257,12 +257,34 @@ h4 {
         font-weight:600;
       }
     }
+
+    // dark items
+    &.dark {
+      li {
+        a {
+          color: #333;
+          &:hover {
+            color: #555;
+          }
+          span:before {
+            background-color: #888;
+          }
+        }
+      }
+
+      li.active {
+        a {
+          color: #000;
+        }
+      }
+    }
   }
 }
 
 // HEADER
 #ab-header {
-  #ab-header-container {
+  position: relative;
+  #ab-header-container-main {
     clear: both;
     z-index: 2;
     position: relative;
@@ -300,6 +322,34 @@ h4 {
           -o-transition: all 0.3s ease-in-out 0s;
           transition: all 0.3s ease-in-out 0s;
         }
+      }
+    }
+  }
+  #ab-header-container-page {
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    .content {
+      margin-bottom: 2em;
+      color: white;
+      text-shadow: 0 0 2px #000;
+      font-size: 20px;
+      h1.title {
+        font-family: $font-primary;
+        font-size: 3em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: .5em 1em;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+      h2.subtitle {
+        font-family: $font-navbar;
+        font-size: 2em;
+        text-align: right;
+        text-transform: uppercase;
+        color: #000;
+        opacity: 0.5;
       }
     }
   }

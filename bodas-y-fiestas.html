@@ -7,16 +7,27 @@ meta-description: Barras móviles de tragos para eventos y fiestas en Mendoza.
 header-content: false
 background-image: fondo-bodas-y-fiestas.jpg
 
-navbar-color: "#000"
+navbar:
+  color: dark
 ---
+
+<!-- HEADER -->
+{% capture header-content %}
+<div id="ab-header-container-page">
+  <div class="content wow fadeIn">
+    <h2 class="subtitle">Los mejores mojitos y variedades</h2>
+    <h1 class="title">Barra para Bodas y Eventos Formales</h1>
+  </div>
+  <div class="clearfix"></div>
+</div>{% endcapture %}
+
+{% include header.html background-image=page.background-image %}
+<!-- HEADER -->
 
 <!-- MAIN -->
 <section id="ab-main">
   <div class="ab-section-background">
-    <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" />
-    <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
-    <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" />
-    {% comment %}<img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">{% endcomment %}
+    {% include partials/wood-background.html %}
   </div>
 
   <div class="ab-section-container">
@@ -47,3 +58,7 @@ navbar-color: "#000"
 
 </section>
 <!-- MAIN -->
+
+<!-- CONTACT -->
+{% include contact.html %}
+<!-- CONTACT -->

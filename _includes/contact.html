@@ -1,40 +1,4 @@
 <!-- CONTACT -->
-{% if include.type == "wood-background" %}
-<section id="ab-contact" style="background: transparent; z-index: 3;">
-  <div class="ab-section-background">
-    <style>
-      .top {
-        top: -40px;
-      }
-    </style>
-    <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" style="margin-top:-40px" />
-    <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
-    <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" style="margin-bottom:-40px" />
-    {% comment %}<img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">{% endcomment %}
-  </div>
-
-  <div class="ab-section-container">
-
-    <div class="ab-body">
-
-      <div class="ab-row">
-        <div class="ab-title wow fadeInDown">
-          <h1>Consultas</h1>
-        </div>
-      </div>
-
-      <div class="ab-row">
-        <div class="form-contact col-sm-8 col-sm-offset-2">
-          {% include contact-form.html %}
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="clearfix"></div>
-</section>
-{% else %}
 <section id="ab-contact">
   <div class="ab-section-container-relative">
 
@@ -68,5 +32,4 @@
 
   <div class="clearfix"></div>
 </section>
-{% endif %}
 <!-- CONTACT -->

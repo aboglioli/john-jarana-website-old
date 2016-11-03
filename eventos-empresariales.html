@@ -9,13 +9,17 @@ header-content: false
 background-image: fondo-eventos-empresariales.jpg
 ---
 
+<!-- HEADER -->
+{% capture header-content %}
+{% endcapture %}
+
+{% include header.html background-image=page.background-image %}
+<!-- HEADER -->
+
 <!-- MAIN -->
 <section id="ab-main">
   <div class="ab-section-background">
-    <img src="{{ site.images }}/tablas-arriba.png" alt="" class="top" />
-    <img src="{{ site.images }}/medio.jpg" alt="" class="top" />
-    <img src="{{ site.images }}/tablas-abajo.png" alt="" class="top" />
-    {% comment %}<img src="{{ site.images }}/beer3.png" alt="" class="icon wow bounceInDown">{% endcomment %}
+    {% include partials/wood-background.html %}
   </div>
 
   <div class="ab-section-container">
@@ -46,3 +50,7 @@ background-image: fondo-eventos-empresariales.jpg
 
 </section>
 <!-- MAIN -->
+
+<!-- CONTACT -->
+{% include contact.html %}
+<!-- CONTACT -->

@@ -1,0 +1,24 @@
+<nav id="ab-navbar" class="wow fadeInDown">
+  <ul class="ab-nav {% if page.navbar.color %}{{ page.navbar.color }}{% endif %}">
+    <li {% if page.url == "/" %}class="active"{% endif %}>
+      <a href="/"><span>Inicio</span></a>
+    </li>
+    <li {% if page.url == "/patio-cervecero.html" %}class="active"{% endif %}>
+      <a href="/patio-cervecero.html"><span>Patio Cervecero</span></a>
+    </li>
+    <li {% if page.url == "/barra-juvenil.html" %}class="active"{% endif %}>
+      <a href="/barra-juvenil.html"><span>Barra Juvenil</span></a>
+    </li>
+    <li {% if page.url == "/eventos-empresariales.html" %}class="active"{% endif %}>
+      <a href="/eventos-empresariales.html"><span>Eventos Empresariales</span></a>
+    </li>
+    <li {% if page.url == "/bodas-y-fiestas.html" %}class="active"{% endif %}>
+      <a href="/bodas-y-fiestas.html"><span>Bodas y Fiestas</span></a>
+    </li>
+    {% comment %}
+    <li class="{% if page.url == "/nuestro-trabajo.html" %}active{% endif %}">
+      <a href="/nuestro-trabajo"><span>Nuestro Trabajo</span></a>
+    </li>
+    {% endcomment %}
+  </ul>
+</nav>
