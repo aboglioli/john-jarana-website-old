@@ -13,6 +13,13 @@
   max-width: 488px;
   text-align: center;
   height: 68px;
+
+  @media (max-width: 448px) {
+    background-position-x: -20px;
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .ab-section {
@@ -25,7 +32,7 @@
     float: left;
     z-index: 2;
     width: 100%;
-    img.top {
+    img.background {
       position: relative;
       float: left;
       z-index: 2;
@@ -55,12 +62,16 @@
 
     .ab-body {
       width: 100%;
+
       .ab-row {
         position: relative;
         text-align: center;
         width: 100%;
         margin: 0;
+
         .ab-title {
+          margin-top: 25px;
+          margin-bottom: 25px;
           text-align: center;
           display: inline-block;
           position: relative;
@@ -71,6 +82,10 @@
 
           h1 {
             @extend .title-with-background;
+          }
+
+          @media (min-width: 992px) and (max-width: 1024px) {
+            margin: 0;
           }
         }
 
@@ -97,6 +112,10 @@
     div {
       z-index: 2;
     }
+
+    @media (max-width: 992px) {
+      position: relative;
+    }
   }
 
   .ab-section-container-relative {
@@ -107,15 +126,15 @@
 
 }
 
-.ab-separator {
-  height: 150px;
-  // background-color: #333;
-  text-align: center;
-  background: url("{{ site.images }}/tabla-pie-de-pagina.jpg");
-  background-size: 100% 100%;
-  background-repeat: repeat;
-  position: relative;
-  float: left;
-  width: 100%;
-}
+/* .ab-separator { */
+/*   height: 150px; */
+/*   // background-color: #333; */
+/*   text-align: center; */
+/*   background: url("{{ site.images }}/tabla-pie-de-pagina.jpg"); */
+/*   background-size: 100% 100%; */
+/*   background-repeat: repeat; */
+/*   position: relative; */
+/*   float: left; */
+/*   width: 100%; */
+/* } */
 
