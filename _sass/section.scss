@@ -6,13 +6,12 @@
   font-weight: 600;
   font-size: 1.5em;
   padding: 23px 0;
-  background-image: url(/assets/images/etiqueta-derecha-e-izq.jpg);
   text-shadow: 0 0 10px #000;
-  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.7);
   width: 488px;
   max-width: 488px;
   text-align: center;
   height: 68px;
+  background-color: #555;
 
   @media (max-width: 448px) {
     background-position-x: -20px;
@@ -26,6 +25,13 @@
   background-color: $ab-section-background-color;
   padding: 0;
   position: relative;
+
+  .ab-shadow {
+    width: 100%;
+    background-color: #252525;
+    height: 50px;
+    box-shadow: 0 0 50px #000;
+  }
 
   .ab-section-background {
     position: relative;
@@ -48,7 +54,7 @@
   }
 
   .ab-section-container {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -124,6 +130,10 @@
     float: left;
   }
 
+}
+
+.ab-section-dark {
+  background-color: #555;
 }
 
 /* .ab-separator { */

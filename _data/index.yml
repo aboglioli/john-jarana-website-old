@@ -1,57 +1,34 @@
 content:
-  - Excelentes precios y cartas de tragos adaptados a tu evento con las
-    <b>CARTAS PERSONALIZADAS</b>.
+  - icon: envelope
+    content: >
+      Excelentes precios y cartas de tragos adaptados a tu evento con las
+      <b>CARTAS PERSONALIZADAS</b>.
 
-  - Marca tendencia en tu evento contratando el <b>PATIO CERVECERO</b> con
-    cervezas artesanales excelentes, tiradas, bien heladas.
+  - icon: beer
+    content: >
+      Marca tendencia en tu evento contratando el <a
+      href="/patio-cervecero.html">PATIO CERVECERO</a> con cervezas artesanales
+      excelentes, tiradas, bien heladas.
 
-  - Variedades de cerveza tirada que más te gusten con una <b>DEGUSTACIÓN
-    GRATIS</b> antes del evento.
+  - icon: glass
+    content: >
+      Variedades de cerveza tirada que más te gusten con una <b>DEGUSTACIÓN
+      GRATIS</b> antes del evento.
 
-  - La <b>BARRA JUVENIL</b> es ideal para cumpleaños de 15 o fiestas para los
-    más chicos y <b>JOHN JARANITA</b> te acompaña con los mejores licuados,
-    daikiris, batidos y tragos SIN ALCOHOL.
+  - icon: child
+    content: >
+      La <a href="/barra-sin-alcohol.html">BARRA SIN ALCOHOL</a> es ideal para
+      cumpleaños de 15 o fiestas para los más chicos y <b>JOHN JARANITA</b> te
+      acompaña con los mejores licuados, daikiris, batidos y tragos SIN ALCOHOL.
 
-  - Las mejores marcas, tragos modernos y elegantes para hacer el evento
-    empresarial ideal y que tu gente socialice.
+  - icon: briefcase
+    content: >
+      Las mejores marcas, tragos modernos y elegantes para hacer el <a
+      href="/barra-sin-alcohol.html">EVENTO EMPRESARIAL</a> ideal y que tu gente
+      socialice.
 
-  - <b>BARMANS</b> de primera, que hacen los mejores mojitos de Mendoza,
-    <b>MOZAS</b> para descongestionar la barra y que todos estén mas cómodos y
-    disfruten del momento.
-
-card_items:
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Asd qwe qwe
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
-
-  - image: https://placehold.it/350x350
-    title: Gran variedad de tragos
-    text: Te ofrecemos una gran variedad de tragos.
+  - icon: users
+    content: >
+      <b>BARMANS</b> de primera, que hacen los mejores mojitos de Mendoza,
+      <b>MOZAS</b> para descongestionar la barra y que todos estén mas cómodos y
+      disfruten del momento.

@@ -384,9 +384,10 @@ h4 {
         font-size: 2em;
         text-align: right;
         text-transform: uppercase;
-        color: #000;
-        opacity: 0.5;
+        color: #fff;
+        /* opacity: 0.8; */
         padding-right: 25px;
+        /* text-shadow: 0 0 4px #000; */
       }
     }
 
@@ -414,24 +415,6 @@ h4 {
 #ab-main {
   @extend .ab-section;
 
-  .ab-section-background {
-    img.background {
-      top: -50px;
-    }
-    img.bottom {
-      margin-bottom: -50px;
-    }
-    img.icon {
-      bottom: -35px;
-      left: calc(50% - 100px);
-      width: 300px;
-    }
-
-    @media (max-width: 992px) {
-      display: none;
-    }
-  }
-
   .ab-section-container {
     .ab-body {
       .ab-row {
@@ -440,35 +423,54 @@ h4 {
         overflow: inherit;
 
         .card-container {
-          padding: .5vw;
-          font-size: 16px;
-          overflow: inherit;
+          font-family: calibri;
+          box-sizing: border-box;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
 
           .card {
-            display: flex;
-            align-items: center;
-            margin: .5vw;
-            background-color: #fece83;
-            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
-            margin: 5px;
-            padding: 8px;
-            width: 32%;
-            float: left;
-            min-height: 120px;
+            width: 350px;
+            box-shadow: 1px 1px 3px #888;
+            padding-: 10px;
+            margin: 10px;
+            background-color: #fff;
 
             p {
-              width: 100%;
-              height: auto;
-              font-size: 13px;
-              margin: 0;
+              margin: 10px;
+              font-family: Montserrat;
+              line-height: 1.4em;
+              font-size: 0.9em;
+              text-align: left;
+              a {
+                color: #000;
+                font-weight: 600;
+              }
             }
 
-            .card-icon {
-              width: 32px;
-              height: auto;
-              position: absolute;
-              left: -16px;
-              top: -16px;
+            .media-middle {
+              text-align: center;
+              padding: 15px;
+              background-color: #eee;
+              .card-icon {
+                background-color: #ddd;
+                color: #999;
+                border-radius: 50%;
+                font-size: 32px;
+                padding: 15px;
+              }
+            }
+
+            &:hover {
+              color: #fff;
+              background-color: #252525;
+              p {
+                a {
+                  color: #fff;
+                  text-shadow: 2px 0 2px #000;
+                }
+              }
             }
 
             @media (max-width: 768px) {
@@ -519,6 +521,7 @@ h4 {
 #ab-footer {
   @extend .ab-section;
   box-shadow: 0 -3px 15px #000;
+  background-color: #252525;
 
   .ab-section-container {
     .ab-body {
@@ -529,9 +532,9 @@ h4 {
 
         .contact-item {
           z-index: 3;
-          color: #000;
+          color: #fff;
           font-size: 1.2em;
-          text-shadow: 0 0 3px #fff;
+          text-shadow: 0 0 1px #000;
 
           img {
             width: 32px;
@@ -545,10 +548,10 @@ h4 {
             margin-left: 5px;
 
             a {
-              color: #000;
+              color: #fff;
               text-decoration: none;
               &:hover {
-                text-shadow: 0 2px 8px #fff;
+                text-decoration: underline;
               }
             }
 

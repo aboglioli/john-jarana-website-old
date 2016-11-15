@@ -13,7 +13,7 @@ description: >
 <!-- HEADER -->
 {% capture header-content %}
   <div id="ab-header-container-main">
-    <div class="col-sm-4 col-sm-offset-4">
+    <div class="col-sm-12">
       <div class="logo">
         <img src="{{ site.images }}/{{ page.logo }}"
         alt="{{ page.description }}" class="wow tada" data-wow-duration="2s" data-wow-iteration="2" />
@@ -35,8 +35,8 @@ description: >
 
 <!-- MAIN -->
 <section id="ab-main">
-  <div class="ab-section-background">
-    {% include partials/wood-background.html %}
+
+  <div class="ab-shadow">
   </div>
 
   <div class="ab-section-container">
@@ -50,10 +50,16 @@ description: >
 
       <div class="ab-row">
         <div class="card-container">
-        {% for paragraph in site.data.index.content %}
+        {% for card in site.data.index.content %}
           <div class="card">
-            {% comment %}<img src="{{ site.images }}/beer-icon.png" alt="" class="card-icon"/>{% endcomment %}
-            <p>{{ paragraph }}</p>
+            <div class="media">
+              <div class="media-left media-middle">
+                <span class="card-icon fa fa-{{ card.icon }}"></span>
+              </div>
+              <div class="media-body">
+                <p>{{ card.content }}</p>
+              </div>
+            </div>
           </div>
         {% endfor %}
         </div>

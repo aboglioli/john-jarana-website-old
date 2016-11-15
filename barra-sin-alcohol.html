@@ -28,8 +28,7 @@ navbar:
 
 <!-- MAIN -->
 <section id="ab-main">
-  <div class="ab-section-background">
-    {% include partials/wood-background.html %}
+  <div class="ab-shadow">
   </div>
 
   <div class="ab-section-container">
@@ -45,9 +44,14 @@ navbar:
         <div class="card-container">
         {% for paragraph in site.data.barra-juvenil.content %}
           <div class="card">
-            <p>
-              {{ paragraph }}
-            </p>
+            <div class="media">
+              <div class="media-left media-middle">
+                <span class="card-icon fa fa-glass"></span>
+              </div>
+              <div class="media-body">
+                <p>{{ paragraph }}</p>
+              </div>
+            </div>
           </div>
         {% endfor %}
         </div>
