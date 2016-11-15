@@ -310,6 +310,38 @@ h4 {
       color: white;
       text-shadow: 0 0 2px #000;
       font-size: 20px;
+      /* Typist */
+      @keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+      }
+
+      @-webkit-keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+      }
+
+      #typist-element {
+        &:after {
+          content: " ";
+          display: inline-block;
+          height: 32px;
+          position: relative;
+          top: 7px;
+          margin-left: 3px;
+          margin-right: 2px;
+          width: 2px;
+          background: #dddddd;
+          animation: blink 1s step-start 0s infinite;
+          -webkit-animation: blink 1s step-start 0s infinite;
+        }
+      }
+
+      .selectedText {
+        display: none;
+      }
     }
     .button {
       button {
@@ -332,6 +364,7 @@ h4 {
     position: absolute;
     left: 0;
     bottom: 30%;
+    width: 100%;
     .content {
       margin-bottom: 2em;
       color: white;
@@ -353,6 +386,7 @@ h4 {
         text-transform: uppercase;
         color: #000;
         opacity: 0.5;
+        padding-right: 25px;
       }
     }
 
@@ -369,6 +403,7 @@ h4 {
         }
         h2.subtitle {
           font-size: 1em;
+          padding: 0;
         }
       }
     }
@@ -392,7 +427,7 @@ h4 {
       width: 300px;
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 992px) {
       display: none;
     }
   }

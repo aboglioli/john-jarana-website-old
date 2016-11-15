@@ -1,16 +1,4 @@
 jQuery(function($) {
-  // $(".owl-carousel").owlCarousel({
-  //   loop: true,
-  //   autoplay: true,
-  //   items: 1,
-  //   margin: 0,
-  //   nav: true,
-  //   navText: ['', ''],
-  //   autoplayHoverPause: true,
-  //   animateOut: 'slideOutUp',
-  //   animateIn: 'slideInUp'
-  // });
-
   $(".owl-carousel").owlCarousel({
     loop: true,
     autoplay: true,
@@ -31,17 +19,8 @@ jQuery(function($) {
     var formObj = $(this);
     var contactData = formObj.serializeArray();
 
-    // var config = {
-    //   apiKey: "AIzaSyAERhm4hw0QCBBXS_-IL2pcxvv-ZUqrdMk",
-    //   authDomain: "contact-form-91ea2.firebaseapp.com",
-    //   databaseURL: "https://contact-form-91ea2.firebaseio.com",
-    //   storageBucket: "",
-    //   messagingSenderId: "862668692236"
-    // };
-    // firebase.initializeApp(config);
 
     // Store emails to firebase
-
     console.log(contactData);
 
     firebase.auth().signInAnonymously().catch(function(error) {
@@ -59,5 +38,14 @@ jQuery(function($) {
       }
     });
 
+  });
+
+  /**
+   * Typist
+   */
+  var typistElement = document.querySelector('#typist-element');
+  new Typist(typistElement, {
+    letterInterval: 60,
+    textInterval: 3000
   });
 });
