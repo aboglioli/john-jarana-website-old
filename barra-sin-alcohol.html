@@ -1,7 +1,7 @@
 ---
 layout: default
 
-title: Patio Cervecero en Mendoza
+title: Barra sin Alcohol en Mendoza
 meta-description: Barras móviles de tragos para eventos y fiestas en Mendoza.
 
 header-content: false
@@ -28,28 +28,26 @@ navbar:
 
 <!-- MAIN -->
 <section id="ab-main">
-  <div class="ab-shadow">
+
+  <div class="ab-title-container">
+    <div class="ab-title">
+      <h1>¿Qué te propone John Jarana?</h1>
+    </div>
   </div>
 
   <div class="ab-section-container">
     <div class="ab-body">
 
       <div class="ab-row">
-        <div class="ab-title wow fadeInLeft">
-          <h1>¿Qué te propone John Jarana?</h1>
-        </div>
-      </div>
-
-      <div class="ab-row">
         <div class="card-container">
-        {% for paragraph in site.data.barra-juvenil.content %}
+        {% for card in site.data.barra-sin-alcohol.content %}
           <div class="card">
             <div class="media">
               <div class="media-left media-middle">
-                <span class="card-icon fa fa-glass"></span>
+                <img class="card-icon" src="{{ site.images }}/card-icons/svg/{{ card.icon }}.svg"></img>
               </div>
               <div class="media-body">
-                <p>{{ paragraph }}</p>
+                <p>{{ card.content }}</p>
               </div>
             </div>
           </div>

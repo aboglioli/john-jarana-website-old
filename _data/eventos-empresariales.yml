@@ -1,15 +1,25 @@
 content:
-  - Alquila esta barra con la mejor calidad de bebidas para tu evento
-    empresarial en Mendoza.
+  - icon: pint
+    content: >
+      Alquila esta barra con la mejor calidad de bebidas para tu evento
+      empresarial en Mendoza.
 
-  - <strong>JOHN JARANA</strong> se encarga de llevar la barra de tragos para tu evento con las
-    distintas opciones de cartas, desde algo para compartir con tus empleados
-    hasta los tragos más sofisticados y de calidad para quedar bien con tus
-    clientes.
+  - icon: brochure
+    content: >
+      <strong>JOHN JARANA</strong> se encarga de llevar la barra de tragos para tu evento con las
+      distintas opciones de cartas, desde algo para compartir con tus empleados
+      hasta los tragos más sofisticados y de calidad para quedar bien con tus
+      clientes.
 
-  - Whisky, vinos, cerveza artesanal, son algunas de las opciones que tenes a
-    disposición en esta barra de tragos ideal para tu evento de negocios.
+  - icon: whisky
+    content: >
+      Whisky, vinos, cerveza artesanal, son algunas de las opciones que tenes a
+      disposición en esta barra de tragos ideal para tu evento de negocios.
 
-  - JOHN JARANA lleva los barmans y las mozas.
+  - icon: "waiter-1"
+    content: >
+      JOHN JARANA lleva los barmans y las mozas.
 
-  - <strong>PEDÍ TU PRESUPUESTO Y RESERVALA EN MENDOZA</strong>
+  - icon: "office-material"
+    content: >
+      <strong>PEDÍ TU PRESUPUESTO Y RESERVALA EN MENDOZA</strong>

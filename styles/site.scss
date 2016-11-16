@@ -426,16 +426,19 @@ h4 {
           font-family: calibri;
           box-sizing: border-box;
           justify-content: center;
-          align-items: center;
+          align-items: stretch;
+          align-content: center;
           display: flex;
           flex-wrap: wrap;
 
           .card {
-            width: 350px;
-            box-shadow: 1px 1px 3px #888;
-            padding-: 10px;
+            width: 450px;
+            padding: 10px;
             margin: 10px;
             background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
 
             p {
               margin: 10px;
@@ -451,24 +454,18 @@ h4 {
 
             .media-middle {
               text-align: center;
-              padding: 15px;
-              background-color: #eee;
+              padding-left: 15px;
+
               .card-icon {
-                background-color: #ddd;
-                color: #999;
-                border-radius: 50%;
-                font-size: 32px;
-                padding: 15px;
+                width: 80px;
               }
             }
 
             &:hover {
-              color: #fff;
-              background-color: #252525;
+              box-shadow: 0 0 3px #aaa;
               p {
                 a {
-                  color: #fff;
-                  text-shadow: 2px 0 2px #000;
+                  text-shadow: 0 3px 3px #666;
                 }
               }
             }
@@ -520,8 +517,8 @@ h4 {
 
 #ab-footer {
   @extend .ab-section;
-  box-shadow: 0 -3px 15px #000;
   background-color: #252525;
+  margin-bottom: 0;
 
   .ab-section-container {
     .ab-body {

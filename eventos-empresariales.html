@@ -25,26 +25,28 @@ background-image: fondo-eventos-empresariales.jpg
 
 <!-- MAIN -->
 <section id="ab-main">
-  <div class="ab-section-background">
-    {% include partials/wood-background.html %}
+
+  <div class="ab-title-container">
+    <div class="ab-title">
+      <h1>¿Qué te propone John Jarana?</h1>
+    </div>
   </div>
 
   <div class="ab-section-container">
     <div class="ab-body">
 
       <div class="ab-row">
-        <div class="ab-title wow fadeInLeft">
-          <h1>¿Qué te propone John Jarana?</h1>
-        </div>
-      </div>
-
-      <div class="ab-row">
         <div class="card-container">
-        {% for paragraph in site.data.eventos-empresariales.content %}
+        {% for card in site.data.eventos-empresariales.content %}
           <div class="card">
-            <p>
-              {{ paragraph }}
-            </p>
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="card-icon" src="{{ site.images }}/card-icons/svg/{{ card.icon}}.svg"></img>
+              </div>
+              <div class="media-body">
+                <p>{{ card.content }}</p>
+              </div>
+            </div>
           </div>
         {% endfor %}
         </div>
