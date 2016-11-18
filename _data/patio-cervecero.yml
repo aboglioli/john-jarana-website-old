@@ -1,21 +1,23 @@
 content:
-  - <strong>JOHN JARANA</strong> te arma un patio cervecero en tu evento con la
-    mejor cerveza artesanal en Mendoza.
+  - icon: brochure
+    content: >
+      <strong>JOHN JARANA</strong> te arma un patio cervecero movil en tu
+      evento, las mesas, los tablones y los bancos rusticos al mejor estilo
+      cervecero.
 
-  - <strong>JOHN JARANA</strong> te da una <strong>DEGUSTACIÓN GRATIS</strong>
-    para que pruebes y elijas las distintas variedades de cerveza antes del
-    evento.
+  - icon: pint
+    content: >
+      Tenes 7 variedades de <strong>CERVEZA ARTESANAL</strong> entre
+      <strong>RUBIAS, ROJAS Y NEGRAS</strong> controlando los procesos correctos
+      de calidad.
 
-  - "<b>Detalles</b>: El patio cervecero tiene capacidad para 30 personas
-    sentadas más todo el espacio que quieras en la barra. JOHN JARANA te arma el
-    deck, las luces al mejor estilo cervecero y la cerveza artesanal tirada a la
-    temperatura justa."
+  - icon: barrel
+    content: >
+      Si te cuesta decidir tenes una <strong>DEGUSTACION GRATIS</strong> para
+      que puedas probar las cervezas antes de la fiesta.
 
-  - Cumpleaños de 15, casamiento, evento empresarial, cumpleaños de 18, fiesta
-    privada, evento en una casa, un salón o el evento que se te ocurra, está
-    cubierto, solo necesitas el espacio y las ganas de que todos hablen de tu
-    fiesta.
-
-  - <strong>JOHN JARANA</strong> lleva los barmans y las mozas.
-
-  - <strong>PEDÍ TU PRESUPUESTO Y RESERVALO EN MENDOZA</strong>
+  - icon: boy
+    content: >
+      Con el <strong>PATIO CERVECERO</strong> podes degustar cervezas caseras
+      artesanales y brindar con tus invitados al mejor choque de
+      <strong>CHOPS</strong> llenos.

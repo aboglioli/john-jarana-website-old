@@ -462,7 +462,8 @@ h4 {
             }
 
             &:hover {
-              box-shadow: 0 0 3px #aaa;
+              box-shadow: 0 0 1px #222;
+              z-index: 5;
               p {
                 a {
                   text-shadow: 0 3px 3px #666;
@@ -474,6 +475,15 @@ h4 {
               width: 100%;
               margin: 0;
               margin-bottom: 5px;
+            }
+          }
+
+          .the-card {
+            background-color: #806363;
+            color: #fff;
+
+            p {
+              text-align: center;
             }
           }
         }

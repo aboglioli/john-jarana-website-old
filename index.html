@@ -20,7 +20,9 @@ description: >
       </div>
       <div class="content wow fadeIn">
         Barras móviles de tragos para <strong id="typist-element"
-          data-typist="cumpleaños de 15, casamientos, eventos empresariales">eventos y fiestas</strong> en Mendoza.
+          data-typist="cumpleaños de 15, cumpleaños de 18, casamientos, bodas de
+          plata, eventos empresariales, fiesta en tu casa, fiestas infantiles,
+          previas"> y cualquier evento que se te ocurra</strong>
       </div>
       <div class="button">
         <button class="wow flipInX" data-wow-delay="1s">¡Pedí tu presupuesto!</button>
@@ -47,18 +49,22 @@ description: >
 
       <div class="ab-row">
         <div class="card-container">
-        {% for card in site.data.index.content %}
-          <div class="card">
+
+          {% for card in site.data.index.content %}
+          <div class="card {% if forloop.last == true %}the-card{% endif %} hvr-grow">
             <div class="media">
+              {% if forloop.last == false %}
               <div class="media-left media-middle">
                 <img class="card-icon" src="{{ site.images }}/card-icons/svg/{{ card.icon}}.svg" alt="{{ card.content | escape }}"></img>
               </div>
+              {% endif %}
               <div class="media-body">
                 <p>{{ card.content }}</p>
               </div>
             </div>
           </div>
-        {% endfor %}
+          {% endfor %}
+
         </div>
       </div>
 

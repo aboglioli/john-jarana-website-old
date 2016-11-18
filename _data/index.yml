@@ -1,34 +1,35 @@
 content:
   - icon: brochure
     content: >
-      Excelentes precios y cartas de tragos adaptados a tu evento con las
-      <b>CARTAS PERSONALIZADAS</b>.
+      Podes elegir la cantidad de tragos que prefieras y armar tu <strong>CARTA
+      PERSONALIZADA</strong> para ajustar el presupuesto y que no gastes ni un
+      peso de más.
 
   - icon: pint
     content: >
-      Marca tendencia en tu evento contratando el <a
-      href="/patio-cervecero.html">PATIO CERVECERO</a> con cervezas artesanales
-      excelentes, tiradas, bien heladas.
-
-  - icon: barrel
-    content: >
-      Variedades de cerveza tirada que más te gusten con una <b>DEGUSTACIÓN
-      GRATIS</b> antes del evento.
-
-  - icon: boy
-    content: >
-      La <a href="/barra-sin-alcohol.html">BARRA SIN ALCOHOL</a> es ideal para
-      cumpleaños de 15 o fiestas para los más chicos y <b>JOHN JARANITA</b> te
-      acompaña con los mejores licuados, daikiris, batidos y tragos SIN ALCOHOL.
-
-  - icon: users
-    content: >
-      Las mejores marcas, tragos modernos y elegantes para hacer el <a
-      href="/barra-sin-alcohol.html">EVENTO EMPRESARIAL</a> ideal y que tu gente
-      socialice.
+      Prendete a la tendencia con John Jarana y reserva el <a
+      href="/patio-cervecero.html">PATIO CERVECERO MOVIL</a> y elegi entre 7
+      variedades distintas de cerveza artesanal buenisima y tirada bien helada.
 
   - icon: waiter
     content: >
-      <b>BARMANS</b> de primera, que hacen los mejores mojitos de Mendoza,
-      <b>MOZAS</b> para descongestionar la barra y que todos estén mas cómodos y
-      disfruten del momento.
+      <strong>BARTENDERS</strong> capacitados de Mendoza y
+      <strong>MOZAS</strong> acercando los cocteles y tragos hacen que tu evento
+      no sea una carrera hasta la barra y todos disfruten de la fiesta.
+
+  - icon: boy
+    content: >
+      John Jarana acomoda la <a href="/barra-sin-alcohol.html">BARRA MOVIL SIN
+      ALCOHOL</a> para que los más chicos también puedan disfrutar de la fiesta
+      y probar los mismos tragos sin alcohol.
+
+  - icon: users
+    content: >
+      Si estás organizando un <a href="/eventos-empresariales.html">EVENTO
+      EMPRESARIAL</a> John Jarana te prepara bebidas internacionales exclusivas
+      para que tus clientes y staff se sientan comodos.
+
+  - icon: barrel
+    content: >
+      No invitar a <strong>JOHN JARANA</strong> es lo primero que podés hacer
+      mal... ¿Qué esperás?
