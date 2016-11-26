@@ -44,7 +44,7 @@
       border: 5px double #252525;
       border-top: 3px solid #252525;
 
-      h1 {
+      h2 {
         z-index: 2;
         position: relative;
         margin: 0;
@@ -105,7 +105,7 @@
           overflow: hidden;
           max-width: 488px;
 
-          h1 {
+          h2 {
             @extend .title-with-background;
           }
 

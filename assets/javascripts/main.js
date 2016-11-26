@@ -13,30 +13,41 @@ jQuery(function($) {
   /**
   * Contact form
   */
+  function thanks() {
+    $('.form-contact').hide(500);
+    $('.contact-message').show(1000);
+  }
+
   $('#contact-form').submit(function(e) {
     e.preventDefault();
 
     var formObj = $(this);
     var contactData = formObj.serializeArray();
 
-
-    // Store emails to firebase
     console.log(contactData);
 
-    firebase.auth().signInAnonymously().catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
+    var ok = contactData.every(function(item) {
+      return item.value !== '';
     });
 
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        console.log(user);
-
-        firebaseContact.database().ref('/contact').push(contactData);
-      }
-    });
+    if(!ok) {
+      alert('Algunos campos están vacíos. Por favor, completalos.');
+    } else {
+      // Store emails to firebase
+      // firebase.auth().signInAnonymously().catch(function(error) {
+      //   // Handle Errors here.
+      //   var errorCode = error.code;
+      //   var errorMessage = error.message;
+      // });
+      //
+      // firebase.auth().onAuthStateChanged(function(user) {
+      //   if (user) {
+      //     firebaseContact.database().ref('/contact').push(contactData);
+      //
+      //   }
+      // });
+          thanks();
+    }
 
   });
 
