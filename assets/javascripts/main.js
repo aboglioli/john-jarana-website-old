@@ -34,19 +34,19 @@ jQuery(function($) {
       alert('Algunos campos están vacíos. Por favor, completalos.');
     } else {
       // Store emails to firebase
-      // firebase.auth().signInAnonymously().catch(function(error) {
-      //   // Handle Errors here.
-      //   var errorCode = error.code;
-      //   var errorMessage = error.message;
-      // });
-      //
-      // firebase.auth().onAuthStateChanged(function(user) {
-      //   if (user) {
-      //     firebaseContact.database().ref('/contact').push(contactData);
-      //
-      //   }
-      // });
-          thanks();
+      firebase.auth().signInAnonymously().catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          firebaseContact.database().ref('/contact').push(contactData);
+
+        }
+      });
+      thanks();
     }
 
   });
