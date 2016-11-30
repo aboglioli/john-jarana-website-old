@@ -7,7 +7,7 @@
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="barras moviles, tragos, fiestas, eventos, mendoza" />
   <meta name="author" content="Alan Boglioli" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.assets | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' |  prepend: site.url }}">
 
   <!-- Facebook and Twitter integration -->
   <meta property="og:title" content="{{ title }}"/>
