@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "John Jarana Website",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,11 @@
   },
   "homepage": "http://www.barramovilmendoza.com.ar",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
     "surge": "^0.18.0"
   }
 }
