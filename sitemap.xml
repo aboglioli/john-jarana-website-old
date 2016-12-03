@@ -14,21 +14,21 @@
 <url>
   <loc>http://barramovilmendoza.com.ar/patio-cervecero</loc>
   <changefreq>daily</changefreq>
-  <priority>0.80</priority>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://barramovilmendoza.com.ar/barra-sin-alcohol</loc>
   <changefreq>daily</changefreq>
-  <priority>0.80</priority>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://barramovilmendoza.com.ar/eventos-empresariales</loc>
   <changefreq>daily</changefreq>
-  <priority>0.80</priority>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://barramovilmendoza.com.ar/bodas-y-fiestas</loc>
   <changefreq>daily</changefreq>
-  <priority>0.80</priority>
+  <priority>1.00</priority>
 </url>
 </urlset>
